@@ -5,20 +5,25 @@ import UniversitiesPage from './pages/UniversitiesPage';
 import MatchPage     from "./pages/MatchPage";
 import ScholarshipPage from "./pages/ScholarshipPage";
 import WishlistPage from "./pages/WishlistPage";
+import ScholarshipCard from "./components/ScholarshipCard.jsx";
+import "./styles/style.css";
 
 
 function App() {
 
   return (
-      <div className="min-h-screen bg-black">
-        <Navbar />
-        <HomePage />
-        <UniversitiesPage />
-        <MatchPage />
-        <ScholarshipPage />
-        <WishlistPage />
-        <Footer />
-      </div>
+      <>
+          <ScholarshipCard />
+      </>
+      // <div className="min-h-screen bg-black">
+      //   <Navbar />
+      //   <HomePage />
+      //   <UniversitiesPage />
+      //   <MatchPage />
+      //   <ScholarshipPage />
+      //   <WishlistPage />
+      //   <Footer />
+      // </div>
   )
 }
 

@@ -1,4 +1,4 @@
-const SCHOLARSHIPS = [
+export const SCHOLARSHIPS = [
     {
         id: 1,
         title: "ASEAN University Network Excellence Scholarship",
