@@ -1,4 +1,11 @@
 import {useState} from "react";
+import {
+    Heart, MapPin, DollarSign, BookOpen, Users, Eye, Clock,
+    GraduationCap, ArrowLeft, Info, MessageCircle, Share2,
+    Users2, ChevronDown, ChevronUp, CheckCircle2, FileText,
+    Bookmark, Send, CalendarDays, BadgeDollarSign, Globe,
+    MessageSquareQuote, Layers
+} from "lucide-react";
 
 export default function ScholarshipCard({data, onView}) {
     const [saved, setSaved] = useState(false);
@@ -15,7 +22,7 @@ export default function ScholarshipCard({data, onView}) {
             </div>
 
             <div className="sc-content">
-                <div className="sc-degree"><GraduationCap size={11} />{data.cardDegree}</div>
+                {/*<div className="sc-degree"><GraduationCap size={11} />{data.cardDegree}</div>*/}
                 <div className="sc-stats-grid">
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><MapPin size={13} /></div>
@@ -23,7 +30,7 @@ export default function ScholarshipCard({data, onView}) {
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><DollarSign size={13} /></div>
-                        <div><div className="sc-stat-label">Type</div><div className="sc-stat-value">${data.type}</div></div>
+                        <div><div className="sc-stat-label">Type</div><div className="sc-stat-value">{data.type}</div></div>
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><BookOpen size={13} /></div>
