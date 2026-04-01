@@ -12,12 +12,12 @@ export default function ScholarshipCard({data, onView}) {
     return (
         <div className="sc-card">
             <div className="sc-banner">
-                <img src={data.image} alt={data.title} className="sc-banner-img" />
+                <img src={data.image} alt={data.org} className="sc-banner-img" />
                 <div className="sc-banner-bottom">
                     <div className="sc-logo-wrap">
-                        <img src={data.logo} alt={data.title} />
+                        <img src={data.logo} alt={data.org} />
                     </div>
-                    <span className="sc-banner-title">{data.org}</span>
+                    <span className="sc-banner-title">{data.title}</span>
                 </div>
             </div>
 
@@ -26,7 +26,7 @@ export default function ScholarshipCard({data, onView}) {
                 <div className="sc-stats-grid">
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><MapPin size={13} /></div>
-                        <div><div className="sc-stat-label">Location</div><div className="sc-stat-value">{data.country.split(",")[0]}</div></div>
+                        <div><div className="sc-stat-label">Country</div><div className="sc-stat-value">{data.country}</div></div>
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><DollarSign size={13} /></div>
@@ -34,7 +34,7 @@ export default function ScholarshipCard({data, onView}) {
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><BookOpen size={13} /></div>
-                        <div><div className="sc-stat-label">Programs</div><div className="sc-stat-value">{data.programs} programs</div></div>
+                        <div><div className="sc-stat-label">Degree</div><div className="sc-stat-value">{data.degree}</div></div>
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><Clock size={13} /></div>
