@@ -1,17 +1,24 @@
 import {useState} from "react";
-import {BookOpen, Clock, DollarSign, Heart, MapPin} from "lucide-react";
+import './styles/ScholarshipCard.css'
+import {
+    Heart, MapPin, DollarSign, BookOpen, Users, Eye, Clock,
+    GraduationCap, ArrowLeft, Info, MessageCircle, Share2,
+    Users2, ChevronDown, ChevronUp, CheckCircle2, FileText,
+    Bookmark, Send, CalendarDays, BadgeDollarSign, Globe,
+    MessageSquareQuote, Layers
+} from "lucide-react";
 
-export default function UniCard({data, onView}) {
+export default function ScholarshipCard({data, onView}) {
     const [saved, setSaved] = useState(false);
     return (
         <div className="sc-card">
             <div className="sc-banner">
-                <img src={data.image} alt={data.title} className="sc-banner-img" />
+                <img src={data.image} alt={data.org} className="sc-banner-img" />
                 <div className="sc-banner-bottom">
                     <div className="sc-logo-wrap">
-                        <img src={data.logo} alt={data.title} />
+                        <img src={data.logo} alt={data.org} />
                     </div>
-                    <span className="sc-banner-title">{data.org}</span>
+                    <span className="sc-banner-title">{data.title}</span>
                 </div>
             </div>
 
@@ -20,19 +27,19 @@ export default function UniCard({data, onView}) {
                 <div className="sc-stats-grid">
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><MapPin size={13} /></div>
-                        <div><div className="sc-stat-label">Location</div><div className="sc-stat-value">{data.country.split(",")[0]}</div></div>
+                        <div><div className="sc-stat-label">Country</div><div className="sc-stat-value">{data.country}</div></div>
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><DollarSign size={13} /></div>
-                        <div><div className="sc-stat-label">Tuition/yr</div><div className="sc-stat-value">${data.priceMin}–${data.priceMax}</div></div>
+                        <div><div className="sc-stat-label">Type</div><div className="sc-stat-value">{data.type}</div></div>
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><BookOpen size={13} /></div>
-                        <div><div className="sc-stat-label">Programs</div><div className="sc-stat-value">{data.programs} programs</div></div>
+                        <div><div className="sc-stat-label">Degree</div><div className="sc-stat-value">{data.degree}</div></div>
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><Clock size={13} /></div>
-                        <div><div className="sc-stat-label">Open Application Date</div><div className="sc-stat-value">{data.openAppDate}</div></div>
+                        <div><div className="sc-stat-label">Deadline</div><div className="sc-stat-value">{data.deadline}</div></div>
                     </div>
                 </div>
 

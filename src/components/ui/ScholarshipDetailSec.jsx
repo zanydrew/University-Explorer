@@ -1,4 +1,6 @@
 import {useRef, useState} from "react";
+import { ChevronDown } from "lucide-react";
+import './styles/ScholarshipDetailSec.css'
 
 export default function ScholarshipDetailSec({icon, title, children,
                                              defaultOpen = true, sectionRef}) {

@@ -1,5 +1,5 @@
 import {useState} from "react";
-import ScholarshipCard from "../components/ScholarshipCard.jsx";
+import ScholarshipCard from "../components/ui/ScholarshipCard.jsx";
 import { SCHOLARSHIPS } from "../data/scholarships";
 
 export default function ScholarshipPage() {

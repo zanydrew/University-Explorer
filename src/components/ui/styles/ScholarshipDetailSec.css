@@ -1,0 +1,59 @@
+
+/* ── Detail Sections ── */
+.detail-section {
+    background: #fff; border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 14px; overflow: hidden;
+}
+.ds-header {
+    padding: 16px 22px;
+    display: flex; align-items: center; justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+}
+.ds-header:hover { background: #fafafa; }
+.ds-header-left { display: flex; align-items: center; gap: 10px; }
+.ds-icon {
+    width: 32px; height: 32px; border-radius: 9px;
+    background: var(--blue-light); color: var(--blue);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.ds-title { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 600; color: var(--text); }
+.ds-chevron { color: var(--text-3); transition: transform 0.25s ease; }
+.ds-chevron.open { transform: rotate(180deg); }
+.ds-divider { height: 1px; background: var(--border); margin: 0 22px; }
+.ds-body {
+    padding: 18px 22px 20px;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease;
+}
+.ds-body.collapsed { max-height: 0 !important; padding-top: 0; padding-bottom: 0; opacity: 0; }
+.ds-para { font-size: 14px; color: var(--text-2); line-height: 1.75; }
+.ds-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.ds-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 14px; color: var(--text-2); line-height: 1.55;
+}
+.ds-bullet {
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--blue-light); color: var(--blue);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+}
+.ds-steps { display: flex; flex-direction: column; gap: 12px; }
+.ds-step { display: flex; align-items: flex-start; gap: 12px; }
+.ds-step-num {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--blue); color: #fff;
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+}
+.ds-step-text { font-size: 14px; color: var(--text-2); line-height: 1.5; padding-top: 3px; }
+.ds-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.ds-tag {
+    background: var(--blue-light); color: var(--blue);
+    font-size: 12px; font-weight: 600; border-radius: 100px;
+    padding: 5px 14px; border: 1px solid var(--blue-mid);
+}
