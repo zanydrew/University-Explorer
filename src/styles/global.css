@@ -2,7 +2,6 @@
 
 /* ─────────────────────────────────────────────────────────────
    global.css  —  reset + base styles
-   Imported once in src/main.jsx
 ───────────────────────────────────────────────────────────── */
 
 @import './variables.css';
