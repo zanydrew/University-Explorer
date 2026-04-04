@@ -1,55 +1,98 @@
-import {useState} from "react";
+import './styles/UniCard.css'
 import './styles/ScholarshipCard.css'
-import {
-    Heart, MapPin, DollarSign, BookOpen, Users, Eye, Clock,
-    GraduationCap, ArrowLeft, Info, MessageCircle, Share2,
-    Users2, ChevronDown, ChevronUp, CheckCircle2, FileText,
-    Bookmark, Send, CalendarDays, BadgeDollarSign, Globe,
-    MessageSquareQuote, Layers
-} from "lucide-react";
+import { Heart, MapPin, DollarSign, BookOpen, Clock } from 'lucide-react'
 
-export default function ScholarshipCard({data, onView}) {
-    const [saved, setSaved] = useState(false);
+export default function ScholarshipCard({scholarship, onSelect, isWishlisted, onToggleWishlist }) {
+
+    // to handle add/remove from wishlist
+    const handleSave = (e) => {
+        e.stopPropagation()
+        // first check if onToggleWishlist exists (toggleWishlist function from useWishlist)
+        // // Then toggle this scholarship(that known by its scholarship.id) in wishlist (if function exists)
+        // if (onToggleWishlist) {
+        //     onToggleWishlist(scholarship.id)
+        // }
+        // above is the full logic, below is the existed function to use
+        onToggleWishlist?.(scholarship.id)
+
+    }
+
     return (
-        <div className="sc-card">
+        <div className="sc-card" onClick={() => onSelect?.(scholarship)}>
+            {/* Banner */}
             <div className="sc-banner">
-                <img src={data.image} alt={data.org} className="sc-banner-img" />
+                <img src={scholarship.image} alt={scholarship.org} className="sc-banner-img" />
+                <div className="sc-banner-overlay" />
+
+                {/* Type badge */}
+                <span className="sc-type-badge">{scholarship.type}</span>
+
+                {/* Deadline badge */}
+                <span className="sc-deadline-badge">
+                    <Clock size={9} /> {scholarship.deadline}
+                </span>
+
+                {/* Heart */}
+                <button
+                    className={`sc-heart-btn${isWishlisted ? ' saved' : ''}`}
+                    onClick={handleSave}
+                    aria-label="Wishlist"
+                >
+                    <Heart size={14} fill={isWishlisted ? 'currentColor' : 'none'} />
+                </button>
+
+                {/* Logo + title */}
                 <div className="sc-banner-bottom">
                     <div className="sc-logo-wrap">
-                        <img src={data.logo} alt={data.org} />
+                        {scholarship.logo
+                            ? <img src={scholarship.logo} alt={scholarship.org} />
+                            : <div className="sc-logo-placeholder">{scholarship.org}</div>
+                        }
                     </div>
-                    <span className="sc-banner-title">{data.title}</span>
+                    <span className="sc-banner-title">{scholarship.title}</span>
                 </div>
             </div>
 
+            {/* Content */}
             <div className="sc-content">
-                {/*<div className="sc-degree"><GraduationCap size={11} />{data.cardDegree}</div>*/}
                 <div className="sc-stats-grid">
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><MapPin size={13} /></div>
-                        <div><div className="sc-stat-label">Country</div><div className="sc-stat-value">{data.country}</div></div>
+                        <div>
+                            <div className="sc-stat-label">Country</div>
+                            <div className="sc-stat-value">{scholarship.country}</div>
+                        </div>
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><DollarSign size={13} /></div>
-                        <div><div className="sc-stat-label">Type</div><div className="sc-stat-value">{data.type}</div></div>
+                        <div>
+                            <div className="sc-stat-label">Type</div>
+                            <div className="sc-stat-value">{scholarship.type}</div>
+                        </div>
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><BookOpen size={13} /></div>
-                        <div><div className="sc-stat-label">Degree</div><div className="sc-stat-value">{data.degree}</div></div>
+                        <div>
+                            <div className="sc-stat-label">Degree</div>
+                            <div className="sc-stat-value">{scholarship.degree}</div>
+                        </div>
                     </div>
                     <div className="sc-stat">
                         <div className="sc-stat-icon"><Clock size={13} /></div>
-                        <div><div className="sc-stat-label">Deadline</div><div className="sc-stat-value">{data.deadline}</div></div>
+                        <div>
+                            <div className="sc-stat-label">Deadline</div>
+                            <div className="sc-stat-value">{scholarship.deadline}</div>
+                        </div>
                     </div>
                 </div>
 
                 <div className="sc-divider" />
                 <div className="sc-actions">
-                    <button className="sc-view-btn" onClick={(e) => { e.stopPropagation(); onView(data); }}>View Details</button>
-                    <button className={`sc-heart-btn ${saved ? "saved" : ""}`}
-                            onClick={(e) => { e.stopPropagation(); setSaved(v => !v); }}
-                            aria-label="Wishlist">
-                        <Heart size={14} fill={saved ? "currentColor" : "none"} />
+                    <button
+                        className="sc-view-btn"
+                        onClick={(e) => { e.stopPropagation(); onSelect?.(scholarship) }}
+                    >
+                        View Details
                     </button>
                 </div>
             </div>
