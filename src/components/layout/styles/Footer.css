@@ -1,0 +1,30 @@
+/* ── Footer.css ── */
+
+.footer {
+    background: var(--blue-dark);
+    padding: 32px 28px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer__logo {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 6px;
+}
+
+.footer__logo-accent {
+    color: var(--color-teal-light);
+}
+
+.footer__tagline {
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+}
+
+.footer__copy {
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.25);
+}
