@@ -1,0 +1,121 @@
+/* ── AdmissionDetails.css ── */
+
+.admission {
+    margin-top: 40px;
+    scroll-margin-top: 60px;
+}
+
+.admission__title {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.admission__sub {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    margin-bottom: 18px;
+}
+
+/* ── Accordion ── */
+.accordion {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+}
+
+.accordion__header:hover { background: var(--color-off-white); }
+
+.accordion__heading {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.accordion__icon-wrap {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: var(--blue-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    flex-shrink: 0;
+}
+
+.accordion__chevron {
+    color: var(--color-text-muted);
+    transition: transform 0.25s ease;
+    display: flex;
+}
+
+.accordion__chevron.open { transform: rotate(180deg); }
+
+.accordion__divider {
+    height: 1px;
+    background: var(--color-border);
+    margin: 0 20px;
+}
+
+/* ── Animated body ── */
+.accordion__body {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.accordion__body.open {
+    max-height: 600px;
+    opacity: 1;
+}
+
+.accordion__body-inner {
+    padding: 16px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ── Check items ── */
+.accordion__check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+}
+
+.accordion__check-bullet {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    background: var(--blue-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--blue);
+    margin-top: 1px;
+}
