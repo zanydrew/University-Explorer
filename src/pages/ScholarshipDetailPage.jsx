@@ -1,185 +1,247 @@
-import {useState, useRef} from "react";
-import ScholarshipDetailSec from "../components/ui/ScholarshipDetailSec.jsx";
-import './styles/ScholarshipDetailPage.css'
-import {SCHOLARSHIPS} from "../data/scholarships.js";
+import { useState, useRef } from 'react'
+import './styles/UniversityDetailPage.css'
 import {
-    ArrowLeft, Info, Eye, Heart,
-    GraduationCap, MapPin, BadgeDollarSign,
-    CalendarDays, Users2, MessageSquareQuote,
-    Share2, FileText, CheckCircle2,
-    Layers, Globe, Send, Bookmark, BookOpen
-} from "lucide-react";
+    MapPin, BookOpen, DollarSign, CalendarDays,
+    Users, Globe, ChevronDown, Heart, Send,
+    GraduationCap, ArrowLeft, Bookmark
+} from 'lucide-react'
 
-export default function ScholarshipDetailPage({data, onBack}) {
-    const [saved, setSaved] = useState(false);
+const ADMISSION_SECTIONS = [
+    {
+        title: 'Scholarship Description',
+        icon: <GraduationCap size={15} />,
+        key: 'description',
+    },
+    {
+        title: 'Scholarship Benefits',
+        icon: <BookOpen size={15} />,
+        key: 'benefits',
+    },
+    {
+        title: 'Majors/Field of Study',
+        icon: <BookOpen size={15} />,
+        key: 'majors',
+    },
+    {
+        title: 'Eligibility Requirements',
+        icon: <BookOpen size={15} />,
+        key: 'eligibility',
+    },
+    {
+        title: 'Required Documents',
+        icon: <BookOpen size={15} />,
+        key: 'documents',
+    },
+    {
+        title: 'How to Apply',
+        icon: <Send size={15} />,
+        key: 'steps',
+    },
+]
 
-    const sectionRefs = {
-        description: useRef(null),
-        benefits: useRef(null),
-        majors: useRef(null),
-        eligibility: useRef(null),
-        documents: useRef(null),
-        apply: useRef(null),
+export default function ScholarshipDetailPage({data, onBack , isWishlisted, onToggleWishlist}) {
+    const [openAccordion,  setOpenAccordion]  = useState(null)
+    const [saved,          setSaved]          = useState(isWishlisted ?? false)
+
+    const admissionRef = useRef(null)
+
+    const handleSave = () => {
+        setSaved(v => !v)
+        onToggleWishlist?.(data.id)
     }
 
-    const scrollTo = (key) => {
-        sectionRefs[key]?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    };
+    // const initials = data.shortName?.slice(0, 2) ?? data.name?.slice(0, 2) ?? '?'
+
+    // Quick info row items
+    const infoItems = [
+        { icon: <MapPin size={16} />,       label: 'Study In',  value: data.country?.split(',')[0] },
+        { icon: <GraduationCap size={16} />,     label: 'Degree', value: data.degree },
+        { icon: <DollarSign size={16} />,   label: 'Type',  value: data.type },
+        { icon: <CalendarDays size={16} />, label: 'Deadline', value: data.deadline },
+    ]
+
 
     return (
-        <div className="detail-page">
-            {/* Navbar */}
-            <nav className="detail-nav">
-                <button className="nav-back" onClick={onBack}><ArrowLeft size={17} /></button>
-                <span className="nav-title">Scholarship Details</span>
-                <button className="nav-info"><Info size={17} /></button>
-            </nav>
+        <div className="udp-wrap animate-fade-in">
 
-            {/* Hero Banner */}
-            <div className="hero-banner">
-                <img src={data.image} alt={data.title} className="hero-img" />
-                <div className="hero-overlay" />
-                <button className={`hero-heart ${saved ? "saved" : ""}`}
-                        onClick={() => setSaved(v => !v)} aria-label="Favorite">
-                    <Heart size={18} fill={saved ? "currentColor" : "none"} />
-                </button>
+            {/* ── Sticky sub-nav ── */}
+            <div className="udp-subnav">
+                <div className="udp-subnav__breadcrumb">
+                    <button
+                        onClick={onBack}
+                        style={{ background:'none', border:'none', cursor:'pointer', display:'flex', alignItems:'center', gap:5, color:'var(--color-text-muted)', fontFamily:'inherit', fontSize:13 }}
+                    >
+                        <ArrowLeft size={14} /> Universities
+                    </button>
+                    <span>/</span>
+                    <span className="udp-subnav__breadcrumb-name">{data.shortName}</span>
+                </div>
+
+                {/*<div className="udp-subnav__links">*/}
+                {/*    <button className="udp-subnav__link" onClick={() => scrollTo(programsRef)}>Programs</button>*/}
+                {/*    <button className="udp-subnav__link" onClick={() => scrollTo(admissionRef)}>Admission</button>*/}
+                {/*</div>*/}
+
+                <div className="udp-subnav__actions">
+                    <button
+                        className={`udp-sidebar__outline${saved ? ' saved' : ''}`}
+                        style={{ padding: '6px 14px', fontSize: 13 }}
+                        onClick={handleSave}
+                    >
+                        <Heart size={13} fill={saved ? 'currentColor' : 'none'} />
+                        {saved ? 'Saved' : 'Save'}
+                    </button>
+                </div>
             </div>
 
-            {/* Body */}
-            <div className="detail-body">
-                {/* LEFT COLUMN */}
+            {/* ── Hero ── */}
+            <div className="udp-hero">
+                {data.image
+                    ? <img src={data.image} alt={data.name} className="udp-hero__img" />
+                    : <div className="udp-hero__dots" />
+                }
+                <div className="udp-hero__dots" />
+                <div className="udp-hero__overlay" />
+
+                <div className="udp-hero__content">
+                    <div>
+                        <div className="udp-hero__badges">
+                            <span className="udp-hero__badge">{data.type} University</span>
+                            {data.ranking && (
+                                <span className="udp-hero__badge udp-hero__badge--rank">
+                                    #{data.ranking} in Cambodia
+                                </span>
+                            )}
+                        </div>
+                        <h1 className="udp-hero__title">{data.name}</h1>
+                        <p className="udp-hero__meta">
+                            {data.address} · Est. {data.established}
+                        </p>
+                    </div>
+
+                    <div className="udp-hero__tagline">
+                        <p className="udp-hero__tagline-label">Accredited by</p>
+                        <p className="udp-hero__tagline-text">{data.accreditation}</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* ── Quick info row ── */}
+            <div className="udp-inforow">
+                {infoItems.map(({ icon, label, value }) => (
+                    <div key={label} className="udp-infocard">
+                        <div className="udp-infocard__icon">{icon}</div>
+                        <div>
+                            <div className="udp-infocard__label">{label}</div>
+                            <div className="udp-infocard__value">{value}</div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* ── Body ── */}
+            <div className="udp-body">
+                {/* ── LEFT COLUMN ── */}
                 <div>
-                    {/* Header */}
-                    <div className="sch-header">
-                        <div className="sch-logo"> <img src={data.logo} alt={data.org} /></div>
-                        <div className="sch-title-block">
-                            <div className="sch-org">{data.org}</div>
-                            <div className="sch-title">{data.title}</div>
-                        </div>
+                    {/* Admission */}
+                    <div ref={admissionRef} className="udp-admission">
+                        <h2 className="udp-section-title">Admission</h2>
+                        <p className="udp-section-sub">Everything you need to apply</p>
+
+                        {ADMISSION_SECTIONS.map((sec, i) => {
+                            const items = Array.isArray(data[sec.key]) ? data[sec.key] : []
+                            if (!items.length) return null
+                            return (
+                                <div key={i} className="udp-accordion">
+                                    <div className="udp-accordion__header" onClick={() => setOpenAccordion(openAccordion === i ? null : i)}>
+                                        <div className="udp-accordion__title">
+                                            <span className="udp-accordion__icon-wrap">{sec.icon}</span>
+                                            {sec.title}
+                                        </div>
+                                        <span className={`udp-accordion__chevron${openAccordion === i ? ' open' : ''}`}>
+                                            <ChevronDown size={18} />
+                                        </span>
+                                    </div>
+                                    {openAccordion === i && <div className="udp-accordion__divider" />}
+                                    <div className={`udp-accordion__body${openAccordion === i ? ' open' : ''}`}>
+                                        <div className="udp-accordion__body-inner">
+                                            {items.map((item, j) => (
+                                                <div key={j} className="udp-check-item">
+                                                    <span className="udp-check-bullet">✓</span>
+                                                    {item}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
+                </div>
 
-                    {/* Info Grid */}
-                    <div className="info-grid">
-                        <div className="info-cell">
-                            <div className="info-cell-icon"><MapPin size={16} /></div>
-                            <div className="info-cell-label">Study in</div>
-                            <div className="info-cell-value">{data.country?.split(",")[0]}</div>
+                {/* ── SIDEBAR ── */}
+                <div className="udp-sidebar">
+                    <div className="udp-sidebar-card">
+                        <div className="udp-sidebar__top">
+                            <div className="udp-sidebar__logo">{data.logo ?? data.name}</div>
+                            <div className="udp-sidebar__badge">
+                                <GraduationCap size={10} /> {data.type}
+                            </div>
+                            <div className="udp-sidebar__name">{data.name}</div>
+                            <div className="udp-sidebar__meta">{data.location} · {data.type}</div>
                         </div>
-                        <div className="info-cell">
-                            <div className="info-cell-icon"><BadgeDollarSign size={16} /></div>
-                            <div className="info-cell-label">Type</div>
-                            <div className="info-cell-value">{data.type}</div>
-                        </div>
-                        <div className="info-cell">
-                            <div className="info-cell-icon"><GraduationCap size={16} /></div>
-                            <div className="info-cell-label">Degree</div>
-                            <div className="info-cell-value">{data.degree}</div>
-                        </div>
-                        <div className="info-cell">
-                            <div className="info-cell-icon"><CalendarDays size={16} /></div>
-                            <div className="info-cell-label">Deadline</div>
-                            <div className="info-cell-value" style={{ fontSize: 12 }}>{data.deadline}</div>
-                        </div>
-                    </div>
 
-                    {/* Sections */}
-                    <ScholarshipDetailSec icon={<FileText size={15} />} title="Scholarship Description" defaultOpen sectionRef={sectionRefs.description}>
-                        <p className="ds-para">{data.description}</p>
-                    </ScholarshipDetailSec>
-
-                    {/* eslint-disable-next-line react-hooks/refs */}
-                    <ScholarshipDetailSec icon={<CheckCircle2 size={15} />} title="Scholarship Benefits" sectionRef={sectionRefs.benefits}>
-                        <ul className="ds-list">
-                            {data.benefits.map((b, i) => (
-                                <li key={i}>
-                                    <span className="ds-bullet"><CheckCircle2 size={11} /></span>
-                                    {b}
-                                </li>
-                            ))}
-                        </ul>
-                    </ScholarshipDetailSec>
-
-                    {/* eslint-disable-next-line react-hooks/refs */}
-                    <ScholarshipDetailSec icon={<Layers size={15} />} title="Majors / Fields of Study" sectionRef={sectionRefs.majors}>
-                        <div className="ds-tags">
-                            {data.majors.map((m, i) => <span key={i} className="ds-tag">{m}</span>)}
-                        </div>
-                    </ScholarshipDetailSec>
-
-                    {/* eslint-disable-next-line react-hooks/refs */}
-                    <ScholarshipDetailSec icon={<Globe size={15} />} title="Eligibility Requirements" sectionRef={sectionRefs.eligibility}>
-                        <ul className="ds-list">
-                            {data.eligibility.map((e, i) => (
-                                <li key={i}>
-                                    <span className="ds-bullet"><CheckCircle2 size={11} /></span>
-                                    {e}
-                                </li>
-                            ))}
-                        </ul>
-                    </ScholarshipDetailSec>
-
-                    {/* eslint-disable-next-line react-hooks/refs */}
-                    <ScholarshipDetailSec icon={<FileText size={15} />} title="Required Documents" sectionRef={sectionRefs.documents}>
-                        <ul className="ds-list">
-                            {data.documents.map((d, i) => (
-                                <li key={i}>
-                                    <span className="ds-bullet"><FileText size={11} /></span>
-                                    {d}
-                                </li>
-                            ))}
-                        </ul>
-                    </ScholarshipDetailSec>
-
-                    {/* eslint-disable-next-line react-hooks/refs */}
-                    <ScholarshipDetailSec icon={<Send size={15} />} title="How to Apply" sectionRef={sectionRefs.apply}>
-                        <div className="ds-steps">
-                            {data.steps.map((s, i) => (
-                                <div key={i} className="ds-step">
-                                    <span className="ds-step-num">{i + 1}</span>
-                                    <span className="ds-step-text">{s}</span>
+                        <div className="udp-sidebar__stats">
+                            {[
+                                ['Programs',    `${data.programsCount ?? data.majors.length}`],
+                                ['Tuition/yr',  `$${data.priceMin}–$${data.priceMax}`],
+                                ['Students',    data.students?.toLocaleString()],
+                                ['Admission',   data.admissionDate],
+                            ].map(([label, value]) => (
+                                <div key={label} className="udp-sidebar__stat-row">
+                                    <span className="udp-sidebar__stat-label">{label}</span>
+                                    <span className="udp-sidebar__stat-value">{value}</span>
                                 </div>
                             ))}
                         </div>
-                    </ScholarshipDetailSec>
-                </div>
 
-                {/* RIGHT COLUMN — Sidebar */}
-                <div className="detail-sidebar">
-                    <div className="sidebar-card">
-                        <div className="sidebar-top">
-                            <div className="sidebar-badge"><GraduationCap size={10} />{data.type}</div>
-                            <div className="sidebar-name">{data.title}</div>
-                            <div className="sidebar-meta">
-                                <div className="sidebar-meta-row"><CalendarDays size={13} />Deadline: {data.deadline}</div>
-                                <div className="sidebar-meta-row"><MapPin size={13} />{data.country}</div>
-                                <div className="sidebar-meta-row"><GraduationCap size={13} />{data.degree} Degree</div>
-                                <div className="sidebar-meta-row"><BookOpen size={13} />{data.programs} Programs Available</div>
+                        <div className="udp-sidebar__actions">
+                            <a
+                                href={data.website ? data.website : '#'}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="udp-sidebar__apply"
+                            >
+                                <Send size={15} /> Apply Now
+                            </a>
+                            <div className="udp-sidebar__secondary">
+                                <button
+                                    className={`udp-sidebar__outline${saved ? ' saved' : ''}`}
+                                    onClick={handleSave}
+                                >
+                                    <Heart size={13} fill={saved ? 'currentColor' : 'none'} />
+                                    {saved ? 'Saved' : 'Save'}
+                                </button>
+                                <a
+                                    href={data.website ? data.website : '#'}
+                                    // href={data.website ? `https://${data.website.replace(/^https?:\/\//, '')}` : '#'}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="udp-sidebar__outline"
+                                >
+                                    <Globe size={13} /> Website
+                                </a>
                             </div>
-                        </div>
-                        <div className="sidebar-actions">
-                            <button className="apply-btn"><Send size={16} />Apply Now</button>
-                            <button className={`save-btn ${saved ? "saved" : ""}`} onClick={() => setSaved(v => !v)}>
-                                <Bookmark size={15} fill={saved ? "currentColor" : "none"} />
-                                {saved ? "Saved to Favorites" : "Save for Later"}
-                            </button>
                         </div>
                     </div>
 
-                    {/* Quick Nav */}
-                    <div className="nav-pills">
-                        {[
-                            ["description", "Description"],
-                            ["benefits", "Benefits"],
-                            ["majors", "Fields of Study"],
-                            ["eligibility", "Eligibility"],
-                            ["documents", "Documents"],
-                            ["apply", "How to Apply"],
-                        ].map(([key, label]) => (
-                            <div key={key} className="nav-pill" onClick={() => scrollTo(key)}>
-                                <span className="nav-pill-dot" />
-                                {label}
-                            </div>
-                        ))}
+                    {/* Deadline card */}
+                    <div className="udp-deadline-card">
+                        <div className="udp-deadline-card__label">
+                            <CalendarDays size={13} /> Application Deadline
+                        </div>
+                        <div className="udp-deadline-card__date">{data.deadline}</div>
+                        <div className="udp-deadline-card__note">{data.accreditation}</div>
                     </div>
                 </div>
             </div>

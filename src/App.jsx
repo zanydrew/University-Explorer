@@ -5,41 +5,37 @@ import {UNIVERSITIES} from "./data/universities.js";
 import UniCard from "./components/ui/UniCard.jsx";
 import ScholarshipDetailPage from "./pages/ScholarshipDetailPage.jsx";
 import {useState} from "react";
+import { useWishlist }          from './hooks/useWishlist'
+import DetailPage from "./pages/DetailPage.jsx";
 
 
 function App() {
 
-    const [activePage, setActivePage] = useState("list"); // "list" | "detail"
-    const [selected, setSelected] = useState(null);
+    const [selectedItem, setSelectedItem] = useState(null)   // university OR scholarship
 
-    const handleView = (data) => {
-        setSelected(data);
-        setActivePage("detail");
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
+    const { wishlist, toggleWishlist } = useWishlist()
 
-    const handleBack = () => {
-        setActivePage("list");
-        setSelected(null);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-    // const handleView = (data) => {
-    //     console.log("View details for:", data.title);
-    // };
+    const navigate = (target, item = null) => {
+        setSelectedItem(item ?? null)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
+    // Which page to go back to from detail
+    const detailBackPage = selectedItem?.title ? 'scholarships' : 'universities'
+
 
   return (
       <>
-          {activePage === "list" && (
-              <div className="cards-grid">
-                  {SCHOLARSHIPS.map(s => (
-                      <ScholarshipCard key={s.id} data={s} onView={handleView} />
-                  ))}
-              </div>
-          )}
-
-          {activePage === "detail" && selected && (
-              <ScholarshipDetailPage data={selected} onBack={handleBack} />
-          )}
+          <DetailPage
+              data={selectedItem}
+              onBack={() => navigate(detailBackPage)}
+              isWishlisted={
+                  wishlist.includes(`s-${selectedItem.id}`)
+              }
+              onToggleWishlist={
+                  (id) => toggleWishlist(`s-${id}`)
+              }
+          />
       </>
   )
 }
