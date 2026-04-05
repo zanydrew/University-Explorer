@@ -1,4 +1,5 @@
 import { CalendarDays } from 'lucide-react'
+import './styles/Deadlinecard.css'
 export default function DeadlineCard({ date, note, label = 'Application Deadline' }) {
     return (
         <div className="deadline-card">

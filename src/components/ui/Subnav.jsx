@@ -1,4 +1,5 @@
 import { ArrowLeft, Heart } from 'lucide-react'
+import './styles/Subnav.css'
 
 export default function SubNav({ backLabel = 'Back', onBack, currentName, saved, onSave, links }) {
     return (

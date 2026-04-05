@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './styles/Programcard.css'
 
 const TABS = ['Overview', 'Curriculum', 'Requirements', 'Career Opportunities']
 
@@ -39,14 +40,6 @@ export function ProgramCard({ program: p, selected, onSelect }) {
     )
 }
 
-/**
- * ProgramDetailPanel — expanded detail panel rendered below the program grid.
- *
- * Props
- * ─────
- * @param {object}   program   – the currently selected program object
- * @param {Function} onClose   – called when the × button is clicked
- */
 export function ProgramDetailPanel({ program: p, onClose }) {
     const [tab, setTab] = useState('Overview')
 

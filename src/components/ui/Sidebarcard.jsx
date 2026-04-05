@@ -1,4 +1,5 @@
 import { Globe, GraduationCap, Heart, Send } from 'lucide-react'
+import './styles/SidebarCard.css'
 
 export default function SidebarCard({ logo, badge, name, meta, stats = [], website, saved, onSave }) {
     const href = website || '#'

@@ -1,3 +1,4 @@
+import './styles/Herosection.css'
 export default function HeroSection({
                                         image,
                                         name,
