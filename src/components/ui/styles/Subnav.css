@@ -1,0 +1,126 @@
+/* ── SubNav.css ── */
+
+.subnav {
+    position: sticky;
+    top: 56px; /* sits below main navbar */
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 32px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* ── Breadcrumb ── */
+.subnav__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+}
+
+.subnav__back-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    font-family: inherit;
+    font-size: 13px;
+    padding: 0;
+    transition: color 0.15s;
+}
+
+.subnav__back-btn:hover {
+    color: var(--blue);
+}
+
+.subnav__sep {
+    color: var(--color-border);
+}
+
+.subnav__current {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+/* ── Optional centre links slot ── */
+.subnav__links {
+    display: flex;
+    gap: 4px;
+}
+
+/* Individual link buttons (consumers render these themselves) */
+.subnav__link {
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-family: inherit;
+}
+
+.subnav__link:hover,
+.subnav__link.active {
+    background: var(--blue-light);
+    color: var(--blue);
+    font-weight: 600;
+}
+
+/* ── Actions ── */
+.subnav__actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.subnav__save-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-secondary);
+    transition: var(--transition-fast);
+}
+
+.subnav__save-btn:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.subnav__save-btn.saved {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: var(--blue-light);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .subnav {
+        top: 56px;
+        padding: 0 16px;
+        height: 46px;
+    }
+
+    .subnav__links  { display: none; }
+    .subnav__actions { display: none; }
+}
