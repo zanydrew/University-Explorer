@@ -1,0 +1,23 @@
+/* ── Tag.css ── */
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    border-radius: var(--radius-full);
+}
+
+/* Sizes */
+.tag--default { font-size: var(--font-size-sm);  padding: 3px 10px; }
+.tag--small   { font-size: var(--font-size-xs);  padding: 2px 8px;  }
+
+/* Hue variants */
+.tag--blue   { background: var(--accent-blue-bg);   color: var(--blue);   }
+.tag--teal   { background: var(--accent-teal-bg);   color: var(--accent-teal-text);   }
+.tag--purple { background: var(--accent-purple-bg); color: var(--accent-purple-text); }
+.tag--green  { background: var(--accent-green-bg);  color: var(--accent-green-text);  }
+.tag--orange { background: var(--accent-orange-bg); color: var(--accent-orange-text); }
+.tag--amber  { background: var(--accent-amber-bg);  color: var(--accent-amber-text);  }
+.tag--lime   { background: var(--accent-lime-bg);   color: var(--accent-lime-text);   }
