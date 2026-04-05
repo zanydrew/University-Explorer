@@ -34,7 +34,7 @@ export default function UniversityDetailPage({ data, onBack, isWishlisted, onTog
 
     const programsRef = useRef(null)
     const admissionRef = useRef(null)
-    const scrollTo = (ref) => {ref.current?.scrollIntoView({behavior: 'smooth', block: 'start'})}
+    // const scrollTo = (ref) => {ref.current?.scrollIntoView({behavior: 'smooth', block: 'start'})}
 
     // if the program is undefined or null return empty array, else return data.programs
     const programs = data.programs ?? []
