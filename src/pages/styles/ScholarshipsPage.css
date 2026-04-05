@@ -1,0 +1,36 @@
+
+.scholarships-page__heading {
+    margin-bottom: 20px;
+}
+
+.scholarships-page__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.scholarships-page__sub {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    margin: 4px 0 0;
+}
+
+.scholarships-page__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .scholarships-page__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .scholarships-page__grid {
+        grid-template-columns: 1fr;
+    }
+}
