@@ -1,0 +1,17 @@
+/* ── Badge.css ── */
+
+.badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: var(--radius-full);
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.badge--default { background: var(--badge-default-bg); color: var(--badge-default-text); }
+.badge--public  { background: var(--badge-public-bg);  color: var(--badge-public-text);  }
+.badge--private { background: var(--badge-private-bg); color: var(--badge-private-text); }
+.badge--hot     { background: var(--badge-hot-bg);     color: var(--badge-hot-text);     }
+.badge--urgent  { background: var(--badge-urgent-bg);  color: var(--badge-urgent-text);  }
