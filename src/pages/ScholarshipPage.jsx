@@ -1,24 +1,28 @@
-import {useState} from "react";
-import ScholarshipCard from "../components/ui/ScholarshipCard.jsx";
-import { SCHOLARSHIPS } from "../data/scholarships";
+/**
+ * pages/ScholarshipsPage.jsx
+ */
+import './styles/ScholarshipsPage.css'
+import ScholarshipCard from '../components/ui/ScholarshipCard'
+import { SCHOLARSHIPS } from '../data/scholarships'
 
-export default function ScholarshipPage() {
-    const [selected, setSelected] = useState(null);
-
-    if (selected) {
-        return (
-            <ScholarshipDetail />
-        )
-    }
+export default function ScholarshipsPage({ onSelectScholarship, wishlist, toggleWishlist }) {
     return (
-        <div className="page-fade">
-            <div className="page-heading">
-                <h2>🏅 Scholarships</h2>
-                <p>Explore funding opportunities for your education in Cambodia</p>
+        <div className="animate-fade-in">
+            <div className="scholarships-page__heading">
+                <h2 className="scholarships-page__title">🏅 Scholarships</h2>
+                <p className="scholarships-page__sub">
+                    Explore funding opportunities for your education in Cambodia
+                </p>
             </div>
-            <div className="grid-3">
+            <div className="scholarships-page__grid">
                 {SCHOLARSHIPS.map(s => (
-                    <ScholarshipCard key={s.id} data={s} onView={handleView} />
+                    <ScholarshipCard
+                        key={s.id}
+                        scholarship={s}
+                        onSelect={onSelectScholarship}
+                        isWishlisted={wishlist?.includes(`s-${s.id}`)}
+                        onToggleWishlist={(id) => toggleWishlist(`s-${id}`)}
+                    />
                 ))}
             </div>
         </div>
