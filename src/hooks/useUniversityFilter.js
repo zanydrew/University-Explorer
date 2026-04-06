@@ -4,7 +4,7 @@ import { UNIVERSITIES } from '../data/universities'
 const DEFAULT_FILTERS = {
     location:  '',
     major:     '',
-    budgetMax: 5000,
+    budgetMax: 10000,
 }
 export function useUniversityFilter() {
     const [searchQuery, setSearchQuery] = useState('')
@@ -34,7 +34,7 @@ export function useUniversityFilter() {
     }, [searchQuery, filters])
 
     const hasActiveFilters =
-        !!filters.location || !!filters.major || filters.budgetMax < 5000 || !!searchQuery
+        !!filters.location || !!filters.major || filters.budgetMax < 10000 || !!searchQuery
 
     const clearFilters = () => {
         setFilters(DEFAULT_FILTERS)
