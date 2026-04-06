@@ -1,4 +1,5 @@
 import {ALL_LOCATIONS, ALL_MAJORS} from "../../data/universities.js";
+import Icon from './Icon'
 
 export default function FilterBar({ filters, setFilter, hasActiveFilters, clearFilters }){
     return (

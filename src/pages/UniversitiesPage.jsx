@@ -1,11 +1,16 @@
-export default function UniversitiesPage({  filteredUniversities,
+import FilterBar from "../components/ui/FilterBar.jsx";
+import UniCard from "../components/ui/UniCard.jsx";
+
+export default function UniversitiesPage({
+                                             filteredUniversities,
                                              filters,
                                              setFilter,
                                              hasActiveFilters,
                                              clearFilters,
                                              onSelectUni,
                                              wishlist,
-                                             toggleWishlist,}) {
+                                             toggleWishlist,
+                                         }){
     return (
         <div className="animate-fade-in">
             <div className="universities-page__heading">
