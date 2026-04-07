@@ -1,5 +1,3 @@
-import {BookOpen, GraduationCap, Send} from "lucide-react";
-
 export const UNIVERSITIES = [
     {
         id: 1,

@@ -9,7 +9,6 @@ export function useBestMatch(){
     // match when all forms selected combined
     const [matchResults, setMatchResults] = useState(null)
 
-    // logics for find match when not all forms selected
     // prev = current state:
     // { degree: 'All Degrees', field: 'All Fields', search: '' }
     // [key]: value → computed property name:
@@ -30,7 +29,7 @@ export function useBestMatch(){
     const setMatchField = (key, value) =>
         setMatchForm(prev => ({...prev, [key]: value }))
 
-    // logics for find match when all forms selected
+    // logics for find match when forms selected and user click find match
 
     const runMatch =() => {
         const results = UNIVERSITIES
