@@ -21,6 +21,14 @@ const STATS = [
     { icon: 'award',    value: SCHOLARSHIPS.length, label: 'Scholarships'},
 ]
 
-export default function HomePage() {
-    return <div></div>
+export default function HomePage({
+                                     searchQuery, setSearchQuery, setPage,
+                                     setFilterMajor, wishlist, toggleWishlist,
+                                     onSelectUni, onSelectScholarship,
+                                 }) {
+    return (
+        <div className="animate-fade-in">
+            {/* ── Hero ── */}
+        </div>
+    )
 }

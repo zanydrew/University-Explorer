@@ -1,0 +1,426 @@
+/* ── HomePage.css ── */
+
+/* ── Hero banner ── */
+.home-hero {
+    background: var(--blue-dark);
+    border-radius: var(--radius-3xl);
+    padding: 52px 52px 46px;
+    margin-bottom: 26px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-hero__blob-1 {
+    position: absolute;
+    top: -80px;
+    right: -60px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.18);
+    pointer-events: none;
+}
+
+.home-hero__blob-2 {
+    position: absolute;
+    bottom: -100px;
+    right: 300px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(20, 184, 166, 0.08);
+    pointer-events: none;
+}
+
+.home-hero__inner {
+    position: relative;
+    max-width: 600px;
+}
+
+/* Eyebrow pill */
+.home-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(37, 99, 235, 0.28);
+    border: 1px solid rgba(37, 99, 235, 0.4);
+    border-radius: var(--radius-full);
+    padding: 5px 14px;
+    margin-bottom: 20px;
+}
+
+.home-hero__eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-teal-light);
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.home-hero__eyebrow-text {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--color-teal-light);
+    letter-spacing: 0.4px;
+}
+
+/* Heading */
+.home-hero__heading {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--color-white);
+    line-height: 1.1;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.home-hero__heading-accent {
+    color: var(--color-teal-light);
+}
+
+.home-hero__subtext {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.75;
+    margin-bottom: 28px;
+}
+
+/* Search bar — pill outline style matching sc-view-btn */
+.home-hero__search {
+    display: flex;
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.55);
+    border-radius: var(--radius-full);
+    padding: 5px 5px 5px 18px;
+    gap: 8px;
+    align-items: center;
+    max-width: 520px;
+    transition: border-color 0.2s;
+}
+
+.home-hero__search:focus-within {
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.home-hero__search-input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: var(--font-size-md);
+    flex: 1;
+    color: var(--color-white);
+    font-family: inherit;
+    padding: 7px 0;
+}
+
+.home-hero__search-input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* Override btn-primary inside the search to match sc-view-btn pill */
+.home-hero__search .btn-primary {
+    background: transparent;
+    color: var(--color-white);
+    border: 1.5px solid rgba(255, 255, 255, 0.55);
+    border-radius: var(--radius-full);
+    padding: 8px 22px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.home-hero__search .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.02);
+}
+
+/* Quick-filter chips */
+.home-hero__chips {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.home-hero__chip {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: var(--radius-full);
+    padding: 5px 14px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: inherit;
+    transition: var(--transition-fast);
+}
+
+.home-hero__chip:hover {
+    background: rgba(255, 255, 255, 0.13);
+    color: var(--color-white);
+}
+
+/* ── Stats row ── */
+.home-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.home-stats__card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.home-stats__icon-wrap {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Stat icon backgrounds */
+.home-stats__icon-wrap--blue   { background: var(--accent-blue-bg);   }
+.home-stats__icon-wrap--teal   { background: var(--accent-teal-bg);   }
+.home-stats__icon-wrap--purple { background: var(--accent-purple-bg); }
+.home-stats__icon-wrap--green  { background: var(--accent-green-bg);  }
+
+.home-stats__value {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    line-height: 1;
+}
+
+.home-stats__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-top: 3px;
+}
+
+/* ── Section grids ── */
+.home-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+/* ── Match CTA banner ── */
+.home-match-cta {
+    background: var(--blue-dark);
+    border-radius: var(--radius-2xl);
+    padding: 36px 40px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-match-cta__blob {
+    position: absolute;
+    top: -50px;
+    right: 220px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgba(20, 184, 166, 0.07);
+    pointer-events: none;
+}
+
+.home-match-cta__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    padding: 4px 12px;
+    margin-bottom: 14px;
+}
+
+.home-match-cta__eyebrow-text {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.5px;
+}
+
+.home-match-cta__title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+
+.home-match-cta__text {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.7;
+    max-width: 440px;
+    margin: 0;
+}
+
+.home-match-cta__btn {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: var(--radius-full);
+    padding: 12px 28px;
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-family: 'DM Sans', inherit;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.home-match-cta__btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+    transform: scale(1.02);
+}
+
+/* ── Scholarships preview ── */
+.home-scholarships-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* ════════════════════════════════
+   RESPONSIVE
+════════════════════════════════ */
+
+/* ── Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+    .home-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-grid-3,
+    .home-scholarships-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ── Small tablet / large phone (≤ 768px) ── */
+@media (max-width: 768px) {
+    .home-hero {
+        padding: 36px 28px 32px;
+        border-radius: var(--radius-xl);
+    }
+
+    .home-hero__heading {
+        font-size: 30px;
+    }
+
+    .home-hero__subtext {
+        font-size: 14px;
+    }
+
+    .home-hero__search {
+        max-width: 100%;
+    }
+
+    .home-match-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 24px;
+        gap: 20px;
+    }
+
+    .home-match-cta__btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .home-match-cta__text {
+        max-width: 100%;
+    }
+}
+
+/* ── Phone (≤ 600px) ── */
+@media (max-width: 600px) {
+    .home-hero {
+        padding: 28px 20px 28px;
+        border-radius: var(--radius-lg);
+        margin-bottom: 16px;
+    }
+
+    .home-hero__heading {
+        font-size: 26px;
+        letter-spacing: -0.3px;
+    }
+
+    .home-hero__eyebrow {
+        margin-bottom: 14px;
+    }
+
+    .home-hero__subtext {
+        font-size: 13.5px;
+        margin-bottom: 20px;
+    }
+
+    .home-hero__search {
+        padding: 4px 4px 4px 14px;
+    }
+
+    .home-hero__search .btn-primary {
+        padding: 8px 16px;
+        font-size: 12.5px;
+    }
+
+    .home-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .home-stats__card {
+        padding: 14px 14px;
+        gap: 10px;
+    }
+
+    .home-stats__value {
+        font-size: 18px;
+    }
+
+    .home-stats__icon-wrap {
+        width: 36px;
+        height: 36px;
+    }
+
+    .home-grid-3,
+    .home-scholarships-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-match-cta {
+        padding: 22px 18px;
+        border-radius: var(--radius-lg);
+    }
+
+    .home-match-cta__title {
+        font-size: 18px;
+    }
+}
