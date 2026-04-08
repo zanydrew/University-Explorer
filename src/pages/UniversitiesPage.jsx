@@ -1,5 +1,6 @@
 import FilterBar from "../components/ui/FilterBar.jsx";
 import UniCard from "../components/ui/UniCard.jsx";
+import './styles/UniversitiesPage.css'
 
 export default function UniversitiesPage({
                                              filteredUniversities,

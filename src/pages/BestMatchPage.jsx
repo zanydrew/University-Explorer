@@ -1,4 +1,8 @@
 import {ALL_LOCATIONS, ALL_MAJORS} from "../data/universities.js";
+import NavyHero from "../components/ui/NavyHero.jsx";
+import Icon from "../components/ui/Icon.jsx";
+import UniCard from "../components/ui/UniCard.jsx";
+import './styles/BestMatchPage.css'
 
 export default function BestMatchPage({  matchForm,
                                           setMatchField,

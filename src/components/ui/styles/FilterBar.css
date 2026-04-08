@@ -1,0 +1,116 @@
+/* ── FilterBar.css ── */
+
+.filter-bar {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-bar__label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--color-text-muted);
+    font-size: 12.5px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.filter-bar__select {
+    min-width: 130px;
+    width: auto;
+}
+
+.filter-bar__budget {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-bar__budget-label {
+    font-size: 12.5px;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+}
+
+.filter-bar__budget-label strong {
+    color: var(--color-text-primary);
+}
+
+.filter-bar__budget-range {
+    flex: 1;
+}
+
+.filter-bar__clear {
+    background: #fef2f2;
+    color: #dc2626;
+    border: none;
+    border-radius: var(--radius-full);
+    padding: 5px 12px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: inherit;
+    transition: var(--transition-fast);
+}
+
+.filter-bar__clear:hover {
+    background: #fee2e2;
+}
+
+.filter-bar__select--major {
+    min-width: 150px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 14px 14px;
+    }
+
+    .filter-bar__label {
+        display: none;
+    }
+
+    .filter-bar__select,
+    .filter-bar__select--major {
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .filter-bar__budget {
+        min-width: unset;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 8px 10px;
+    }
+
+    .filter-bar__budget-label {
+        width: 100%;
+    }
+
+    .filter-bar__budget-range {
+        width: 100%;
+        flex: unset;
+    }
+
+    .filter-bar__clear {
+        align-self: flex-start;
+    }
+}

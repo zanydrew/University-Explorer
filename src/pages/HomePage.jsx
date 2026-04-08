@@ -7,11 +7,14 @@
 - Footer
 * */
 
+import './styles/HomePage.css'
 import {ALL_MAJORS, UNIVERSITIES} from "../data/universities.js";
 import {SCHOLARSHIPS} from "../data/scholarships.js";
 import UniCard from "../components/ui/UniCard.jsx";
 import SectionHeader from "../components/ui/SectionHeader.jsx";
 import ScholarshipCard from "../components/ui/ScholarshipCard.jsx";
+import Icon from "../components/ui/Icon.jsx";
+import { TrendingUp, Medal } from 'lucide-react'
 
 const TRENDING     = UNIVERSITIES.slice(0, 3)
 
