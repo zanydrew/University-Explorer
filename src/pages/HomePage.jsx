@@ -8,7 +8,7 @@
 * */
 
 import './styles/HomePage.css'
-import {ALL_MAJORS, UNIVERSITIES} from "../data/universities.js";
+import {ALL_MAJORS, TOTAL_STUDENTS, UNIVERSITIES} from "../data/universities.js";
 import {SCHOLARSHIPS} from "../data/scholarships.js";
 import UniCard from "../components/ui/UniCard.jsx";
 import SectionHeader from "../components/ui/SectionHeader.jsx";
@@ -23,7 +23,7 @@ const QUICK_MAJORS = ['Computer Science', 'Business Administration', 'Architectu
 const STATS = [
     { icon: 'building', value: UNIVERSITIES.length, label: 'Universities'   },
     { icon: 'book',     value: ALL_MAJORS.length,   label: 'Programs Available' },
-    { icon: 'users',    value: '85K+',              label: 'Total Students'},
+    { icon: 'users',    value: TOTAL_STUDENTS,              label: 'Total Students'},
     { icon: 'award',    value: SCHOLARSHIPS.length, label: 'Scholarships'},
 ]
 

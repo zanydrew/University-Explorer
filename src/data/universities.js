@@ -398,3 +398,4 @@ export const UNIVERSITIES = [
 /** Derived lookups used by filters */
 export const ALL_MAJORS    = [...new Set(UNIVERSITIES.flatMap(u => u.majors))].sort()
 export const ALL_LOCATIONS = [...new Set(UNIVERSITIES.map(u => u.location))].sort()
+export const TOTAL_STUDENTS = UNIVERSITIES.reduce((sum, university) => sum + university.students, 0);
