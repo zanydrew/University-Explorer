@@ -91,7 +91,7 @@ export function ProgramDetailPanel({ program: p, onClose }) {
 
                 {tab === 'Curriculum' && (
                     <div className="program-panel__curriculum-grid">
-                        {p.curriculum.map((c, i) => (
+                        {(p.curriculum ?? []).map((c, i) => (
                             <div key={i} className="program-panel__curriculum-item">
                                 <span className="program-panel__curriculum-num">{i + 1}</span>
                                 {c}
@@ -102,7 +102,7 @@ export function ProgramDetailPanel({ program: p, onClose }) {
 
                 {tab === 'Requirements' && (
                     <div className="program-panel__req-list">
-                        {p.requirements.map((r, i) => (
+                        {(p.requirements ?? []).map((r, i) => (
                             <div key={i} className="program-panel__req-item">
                                 <span className="program-panel__req-check">✓</span>
                                 {r}
@@ -113,7 +113,7 @@ export function ProgramDetailPanel({ program: p, onClose }) {
 
                 {tab === 'Career Opportunities' && (
                     <div className="program-panel__career-tags">
-                        {p.careers.map((c, i) => (
+                        {(p.careers ?? []).map((c, i) => (
                             <span key={i} className="program-panel__career-tag">{c}</span>
                         ))}
                     </div>

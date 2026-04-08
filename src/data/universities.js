@@ -29,7 +29,9 @@ export const UNIVERSITIES = [
                 field: "Technology",
                 duration: "4 years",
                 tuition: "$400–$800/year",
-                desc: "Focuses on programming, software development, and computer systems.",
+                desc: "Focuses on programming, software development, and computer systems."
+                , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]
+
             },
             {
                 id: 2,
@@ -38,7 +40,8 @@ export const UNIVERSITIES = [
                 field: "Technology",
                 duration: "2 years",
                 tuition: "$600–$900/year",
-                desc: "Advanced study in IT systems, networking, and software engineering.",
+                desc: "Advanced study in IT systems, networking, and software engineering."
+                , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]
             },
             {
                 id: 3,
@@ -56,7 +59,8 @@ export const UNIVERSITIES = [
                 field: "Social Sciences",
                 duration: "4 years",
                 tuition: "$400–$700/year",
-                desc: "Focus on global politics, diplomacy, and international relations.",
+                desc: "Focus on global politics, diplomacy, and international relations."
+                , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]
             },
             {
                 id: 5,
@@ -65,7 +69,8 @@ export const UNIVERSITIES = [
                 field: "Social Sciences",
                 duration: "4 years",
                 tuition: "$400–$700/year",
-                desc: "Study of human behavior, mental processes, and counseling basics.",
+                desc: "Study of human behavior, mental processes, and counseling basics."
+                , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]
             },
             {
                 id: 6,
@@ -74,7 +79,8 @@ export const UNIVERSITIES = [
                 field: "Science",
                 duration: "4 years",
                 tuition: "$400–$700/year",
-                desc: "Covers ecology, conservation, and environmental management.",
+                desc: "Covers ecology, conservation, and environmental management."
+                , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]
             },
             {
                 id: 7,
@@ -83,7 +89,8 @@ export const UNIVERSITIES = [
                 field: "Business",
                 duration: "2 years",
                 tuition: "$600–$900/year",
-                desc: "Focus on sustainable tourism and hospitality management.",
+                desc: "Focus on sustainable tourism and hospitality management."
+                , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]
             }
         ],
 
@@ -208,12 +215,12 @@ export const UNIVERSITIES = [
         programsCount: 6,
 
         programs: [
-            { id: 1, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$400/year", desc: "Basic programming and systems." },
-            { id: 2, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$350/year", desc: "Networking and IT support." },
-            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$350/year", desc: "Management and entrepreneurship." },
-            { id: 4, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$350/year", desc: "Financial accounting and auditing." },
-            { id: 5, name: "Agronomy", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$300/year", desc: "Crop science and farming." },
-            { id: 6, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$300/year", desc: "English teaching and communication." }
+            { id: 1, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$400/year", desc: "Basic programming and systems." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]},
+            { id: 2, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$350/year", desc: "Networking and IT support." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]},
+            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$350/year", desc: "Management and entrepreneurship." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]},
+            { id: 4, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$350/year", desc: "Financial accounting and auditing." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]},
+            { id: 5, name: "Agronomy", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$300/year", desc: "Crop science and farming." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]},
+            { id: 6, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$300/year", desc: "English teaching and communication." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]}
         ],
 
         students: 3000,
@@ -243,7 +250,8 @@ export const UNIVERSITIES = [
         id: 4,
         name: "National Institute of Agriculture",
         shortName: "NIA",
-        image: "https://i.ytimg.com/vi/GAYkmWGFp10/maxresdefault.jpg",
+        // image: "https://i.ytimg.com/vi/GAYkmWGFp10/maxresdefault.jpg",
+        image: "https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/468532388_546710621487292_591321336264002671_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=25d718&_nc_ohc=tbM_WaCFRG0Q7kNvwHqvC6g&_nc_oc=AdoQIP3ij6pnQM5TLmyNPDtl9b-v1llRDEeyVeOdFhYCMm81520i0SeXuoynrPbabRA&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&_nc_gid=xJV5V43dKaSiMQDTKpKRxA&_nc_ss=7a389&oh=00_Af16tRPS6N9zZIc2pfhb2FUAlG_wJi9xoSbMN2tsJXhnCw&oe=69DC5308",
         logo: "https://cambodianbamboostudies.com/assets/img/nia-logo.png",
         location: "Phnom Penh, Cambodia",
         address: "Prek Leap, Chroy Changvar, Phnom Penh",
@@ -260,11 +268,10 @@ export const UNIVERSITIES = [
         programsCount: 5,
 
         programs: [
-            { id: 1, name: "Agronomy", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$400/year", desc: "Crop production and soil science." },
-            { id: 2, name: "Animal Science", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$400/year", desc: "Livestock production." },
-            { id: 3, name: "Agricultural Engineering", degree: "Bachelor", field: "Engineering", duration: "4 years", tuition: "$500/year", desc: "Engineering for farming systems." },
-            { id: 4, name: "Fisheries", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$400/year", desc: "Aquaculture and fisheries." },
-            { id: 5, name: "Agribusiness", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$400/year", desc: "Agricultural business." }
+             { id: 2, name: "Animal Science", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$400/year", desc: "Livestock production." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] },
+            { id: 3, name: "Agricultural Engineering", degree: "Bachelor", field: "Engineering", duration: "4 years", tuition: "$500/year", desc: "Engineering for farming systems." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]},
+            { id: 4, name: "Fisheries", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$400/year", desc: "Aquaculture and fisheries." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]},
+            { id: 5, name: "Agribusiness", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$400/year", desc: "Agricultural business.", curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] }
         ],
 
         students: 9300,
@@ -304,11 +311,11 @@ export const UNIVERSITIES = [
         programsCount: 5,
 
         programs: [
-            { id: 1, name: "Architecture", degree: "Bachelor", field: "Design", duration: "5 years", tuition: "$800/year", desc: "Architecture and urban design." },
-            { id: 2, name: "Fine Arts", degree: "Bachelor", field: "Arts", duration: "4 years", tuition: "$600/year", desc: "Painting and sculpture." },
-            { id: 3, name: "Graphic Design", degree: "Bachelor", field: "Design", duration: "4 years", tuition: "$700/year", desc: "Visual communication design." },
-            { id: 4, name: "Performing Arts", degree: "Bachelor", field: "Arts", duration: "4 years", tuition: "$600/year", desc: "Dance and theater." },
-            { id: 5, name: "Archaeology", degree: "Bachelor", field: "Social Sciences", duration: "4 years", tuition: "$700/year", desc: "Cultural heritage studies." }
+            { id: 1, name: "Architecture", degree: "Bachelor", field: "Design", duration: "5 years", tuition: "$800/year", desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] },
+            { id: 2, name: "Fine Arts", degree: "Bachelor", field: "Arts", duration: "4 years", tuition: "$600/year", desc: "Painting and sculpture." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]},
+            { id: 3, name: "Graphic Design", degree: "Bachelor", field: "Design", duration: "4 years", tuition: "$700/year", desc: "Visual communication design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] },
+            { id: 4, name: "Performing Arts", degree: "Bachelor", field: "Arts", duration: "4 years", tuition: "$600/year", desc: "Dance and theater." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]},
+            { id: 5, name: "Archaeology", degree: "Bachelor", field: "Social Sciences", duration: "4 years", tuition: "$700/year", desc: "Cultural heritage studies." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]}
         ],
 
         students: 2000,
@@ -343,11 +350,11 @@ export const UNIVERSITIES = [
         programsCount: 5,
 
         programs: [
-            { id: 1, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$900/year" },
-            { id: 2, name: "Finance & Banking", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$1000/year" },
-            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$900/year" },
-            { id: 4, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$1000/year" },
-            { id: 5, name: "Tourism", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year" }
+            { id: 1, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$900/year" , desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] },
+            { id: 2, name: "Finance & Banking", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$1000/year", desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]  },
+            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$900/year" , desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] },
+            { id: 4, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$1000/year", desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]  },
+            { id: 5, name: "Tourism", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year" , desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] }
         ],
 
         majors: ["Agronomy", "Animal Science", "Fisheries", "Agribusiness"],
@@ -378,11 +385,11 @@ export const UNIVERSITIES = [
         programsCount: 5,
 
         programs: [
-            { id: 1, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$900/year" },
-            { id: 2, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$850/year" },
-            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year" },
-            { id: 4, name: "Tourism & Hospitality", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$750/year" },
-            { id: 5, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$700/year" }
+            { id: 1, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$900/year" , desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] },
+            { id: 2, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$850/year", desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]  },
+            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year", desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"]  },
+            { id: 4, name: "Tourism & Hospitality", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$750/year" , desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] },
+            { id: 5, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$700/year" , desc: "Architecture and urban design." , curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] }
         ],
 
         majors: ["Agronomy", "Animal Science", "Fisheries", "Agribusiness"],

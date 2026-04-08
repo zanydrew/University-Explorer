@@ -204,12 +204,21 @@ The biggest challenge was managing state that needed to be shared across multipl
 
 ### 📄 Universities Page
 
-
 ![img_7.png](src/assets/img_7.png)
+
+### 📄 University Detial Page
+
+![img11.png](src/assets/img11.png)
+
+![img_11.png](src/assets/img_11.png)
 
 ### 📄 Scholarships Page
 
 ![img_8.png](src/assets/img_8.png)
+
+### 📄 Scholarship Detial Page
+
+![img_12.png](src/assets/img_12.png)
 
 ### 📄 Best Match Page
 
@@ -218,5 +227,6 @@ The biggest challenge was managing state that needed to be shared across multipl
 ### 📄 Wishlist Page
 
 ![img_10.png](src/assets/img_10.png)
+
 
 ---
