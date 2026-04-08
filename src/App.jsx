@@ -14,9 +14,9 @@ import HomePage from "./pages/HomePage.jsx";
 
 function App() {
 
-    useEffect(() => {
-        document.title = "UniSearch";
-    }, []);
+    // useEffect(() => {
+    //     document.title = "UniSearch";
+    // }, []);
 
     const [page,        setPageState]   = useState('home')
     const [selectedItem, setSelectedItem] = useState(null)   // university OR scholarship

@@ -21,12 +21,12 @@ export function useUniversityFilter() {
                 !q ||
                 u.name.toLowerCase().includes(q) ||
                 u.location.toLowerCase().includes(q) ||
-                (u.shortName?.toLowerCase().includes(q)) ||
-                u.majors.some(m => m.toLowerCase().includes(q))
+                u.shortName?.toLowerCase().includes(q) ||
+                (u.majors ?? []).some(m => m.toLowerCase().includes(q))
 
             const matchesLocation = !filters.location || u.location === filters.location
             const matchesMajor    = !filters.major    || u.majors.includes(filters.major)
-            // new data uses priceMin instead of tuitionMin
+
             const matchesBudget   = (u.priceMin ?? u.priceMin ?? 0) <= filters.budgetMax
 
             return matchesSearch && matchesLocation && matchesMajor && matchesBudget

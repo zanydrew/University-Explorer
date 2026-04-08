@@ -99,7 +99,7 @@ export default function HomePage({
             <SectionHeader
                 icon={<TrendingUp size={20} />}
                 title="Popular Universities"
-                // sub="Most searched by students this month"
+                sub="The most popular universities for Cambodian students"
                 onMore={() => setPage('universities')}
             />
             <div className="home-grid-3">
@@ -136,7 +136,7 @@ export default function HomePage({
             {/* ── Scholarships preview ── */}
             <SectionHeader
                 title="🏅 Available Scholarships"
-                // sub="Funding opportunities for Cambodian students"
+                sub="Funding opportunities for Cambodian students"
                 onMore={() => setPage('scholarships')}
             />
             <div className="home-scholarships-grid">

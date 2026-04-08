@@ -314,6 +314,8 @@ export const UNIVERSITIES = [
         students: 2000,
         type: "Public",
 
+        majors: ["Agronomy", "Animal Science", "Fisheries", "Agribusiness"],
+
         accreditation: "Ministry of Education",
 
         description: "RUFA is Cambodia’s leading institution for arts, culture, and heritage.",
@@ -348,6 +350,8 @@ export const UNIVERSITIES = [
             { id: 5, name: "Tourism", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year" }
         ],
 
+        majors: ["Agronomy", "Animal Science", "Fisheries", "Agribusiness"],
+
         students: 5000,
         type: "Private",
 
@@ -380,6 +384,8 @@ export const UNIVERSITIES = [
             { id: 4, name: "Tourism & Hospitality", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$750/year" },
             { id: 5, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$700/year" }
         ],
+
+        majors: ["Agronomy", "Animal Science", "Fisheries", "Agribusiness"],
 
         students: 4000,
         type: "Private",
