@@ -399,6 +399,292 @@ export const UNIVERSITIES = [
 
         description: "Angkor University provides practical education in business, IT, and tourism in Siem Reap."
     },
+    {
+        id: 8,
+        name: "University of Battambang",
+        shortName: "NUBB",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7mClnM7pUf5r0csrKTh-bJmdi67xUp1sqMg&s",
+        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe-sRdYcra_FPeJh1Cai11GeejN9j_I6uzwg&s",
+        location: "Battambang, Cambodia",
+        address: "Battambang City",
+        phone: "+855 17 671 825",
+        website: "http://www.nubb.edu.kh/",
+
+        degree: ["Associate", "Bachelor"],
+        admissionDate: "Oct",
+
+        priceMin: 400,
+        priceMax: 1000,
+
+        programsCount: 5,
+
+        programs: [
+            { id: 1, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$900/year" },
+            { id: 2, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$850/year" },
+            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year" },
+            { id: 4, name: "Tourism & Hospitality", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$750/year" },
+            { id: 5, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$700/year" }
+        ],
+
+        students: 4000,
+        type: "Private",
+
+        description: "The National University Of Battambang (NUBB) was founded by SAMDECH KROLAHOM SAR KHENG, Deputy Prime Minister, Minister Of Interior, in 2007 with the vision of providing opportunities to students living in rural areas, especially in north-western Cambodia"
+    },
+    {
+    id: 9,
+    name: "University of Management and Economics",
+    shortName: "UME",
+    image: "https://www.ume.edu.kh/images/Image-Slide-2024.gif",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs7qJVcs0hSV1LSPzEz3JFpG7fil6OwypEfg&s",
+    location: "Kampong Cham, Cambodia",
+    address: "National Road 7, Boeung Snay Village, Sangkat Sambour Meas, Kampong Cham City, Cambodia",
+    phone: "+855 77 777 000",
+    website: "https://ume.edu.kh/",
+
+    degree: ["Associate", "Bachelor", "Master"],
+    admissionDate: "Oct",
+
+    priceMin: 350,
+    priceMax: 900,
+
+    programsCount: 5,
+
+    programs: [
+        { id: 1, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$700/year" },
+        { id: 2, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$650/year" },
+        { id: 3, name: "Finance and Banking", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$750/year" },
+        { id: 4, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$800/year" },
+        { id: 5, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$600/year" }
+    ],
+
+    students: 2000,
+    type: "Private",
+
+    description: "The University of Management and Economics (UME) is a private higher education institution located in Kampong Cham City, Cambodia. It focuses on business, finance, and technology education, providing affordable programs for students in central provinces."
+    },
+    {
+    id: 10,
+    name: "Saint Paul Institute",
+    shortName: "SPI",
+    image: "https://spi.edu.kh/wp-content/uploads/slider/cache/71693bf026f04c628e1786b4291de82b/SPI-Campus-no-logo-Crop.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYAVZa-qTINpjVxq0Wd6QNQ4qc9ERAxQItjw&s",
+    location: "Takeo, Cambodia",
+    address: "Angkorki Village, Tapam Commune, Tramkok District, Takeo Province, Cambodia",
+    phone: "+855 78 556 552",
+    website: "https://spi.edu.kh/",
+
+    degree: ["Associate", "Bachelor"],
+    admissionDate: "Oct",
+
+    priceMin: 400,
+    priceMax: 1200,
+
+    programsCount: 5,
+
+    programs: [
+        { id: 1, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$900/year" },
+        { id: 2, name: "Agronomy", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$850/year" },
+        { id: 3, name: "Tourism Management", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year" },
+        { id: 4, name: "English Literature", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$750/year" },
+        { id: 5, name: "Social Work", degree: "Bachelor", field: "Social Science", duration: "4 years", tuition: "$700/year" }
+    ],
+
+    students: 300,
+    type: "Private",
+
+    description: "Saint Paul Institute (SPI) is a private Catholic higher education institution in Takeo Province, Cambodia, founded in 2009. It offers programs such as IT, agronomy, tourism, English, and social work, focusing on practical and community-based education."
+},
+{
+    id: 11,
+    name: "Svay Rieng University",
+    shortName: "SRU",
+    image: "https://academics-bucket-sj19asxm-prod.s3.ap-southeast-1.amazonaws.com/5307b327-dc56-419d-b7d9-af98149a4722/feature-image.jpg",
+    logo: "https://academics-bucket-sj19asxm-prod.s3.ap-southeast-1.amazonaws.com/5307b327-dc56-419d-b7d9-af98149a4722/5307b327-dc56-419d-b7d9-af98149a4722.png",
+    location: "Svay Rieng, Cambodia",
+    address: "National Road 1, Svay Rieng City, Svay Rieng Province, Cambodia",
+    phone: "+855 44 944 333",
+    website: "https://sru.edu.kh/",
+
+    degree: ["Associate", "Bachelor"],
+    admissionDate: "Oct",
+
+    priceMin: 300,
+    priceMax: 700,
+
+    programsCount: 5,
+
+    programs: [
+        { id: 1, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$600/year" },
+        { id: 2, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$550/year" },
+        { id: 3, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$500/year" },
+        { id: 4, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$450/year" },
+        { id: 5, name: "Agriculture", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$400/year" }
+    ],
+
+    students: 3000,
+    type: "Public",
+
+    description: "Svay Rieng University (SRU) is a public university established in 1997 in Svay Rieng Province, Cambodia. It provides higher education opportunities for students in the southeastern region, offering programs in IT, business, agriculture, and education."
+},
+{
+    id: 12,
+    name: "Khemarak University",
+    shortName: "KU",
+    image: "https://academics-bucket-sj19asxm-prod.s3.ap-southeast-1.amazonaws.com/5dab4b09-2fd9-4303-bc7b-71c3afb53947/feature-image.jpg",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIRKRFe9P0yztFB_Xw4UuTkmGeZaHzhEP0TA&s",
+    location: "Koh Kong, Cambodia",
+    address: "Koh Kong City, Koh Kong Province, Cambodia",
+    phone: "+855 12 900 200",
+    website: "https://khemarak.edu.kh/",
+
+    degree: ["Associate", "Bachelor"],
+    admissionDate: "Oct",
+
+    priceMin: 350,
+    priceMax: 900,
+
+    programsCount: 5,
+
+    programs: [
+        { id: 1, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$800/year" },
+        { id: 2, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$700/year" },
+        { id: 3, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$650/year" },
+        { id: 4, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$600/year" },
+        { id: 5, name: "Tourism Management", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$750/year" }
+    ],
+
+    students: 1500,
+    type: "Private",
+
+    description: "Khemarak University is a private higher education institution located in Koh Kong Province, Cambodia. It offers programs in business, IT, tourism, and English, supporting students in coastal and remote regions."
+    },
+    {
+    id: 13,
+    name: "Life University",
+    shortName: "LU",
+    image: "https://cpl.sgp1.cdn.digitaloceanspaces.com/stadium/gallery/1741063945_67c68709d0adf.jpg",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTREwk_PQArLX4ey5jEh3VEQg0iMmQxsPcoHA&s",
+    location: "Preah Sihanouk, Cambodia",
+    address: "Sihanoukville City, Preah Sihanouk Province, Cambodia",
+    phone: "+855 11 888 999",
+    website: "https://lifeun.edu.kh/",
+
+    degree: ["Associate", "Bachelor"],
+    admissionDate: "Oct",
+
+    priceMin: 400,
+    priceMax: 1000,
+
+    programsCount: 5,
+
+    programs: [
+        { id: 1, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$900/year" },
+        { id: 2, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$850/year" },
+        { id: 3, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year" },
+        { id: 4, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$750/year" },
+        { id: 5, name: "Hospitality Management", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$900/year" }
+    ],
+
+    students: 1200,
+    type: "Private",
+
+    description: "Life University is a private university in Sihanoukville, Cambodia. It provides higher education focused on business, IT, and hospitality, supporting the growing economic and tourism sector of the coastal region."
+    },
+    {
+    id: 14,
+    name: "International University",
+    shortName: "IU",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC4fHMC0wLiseerwSQzjXdQ_bv8_jK_7Mn7A&s",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHNBvRhz78tL4VfPYP-jkjbdFzqXj-Wk3pkA&s",
+    location: "Phnom Penh, Cambodia",
+    address: "Toul Kork, Phnom Penh, Cambodia",
+    phone: "+855 23 123 4567",
+    website: "https://iu.edu.kh/",
+
+    degree: ["Associate", "Bachelor", "Master"],
+    admissionDate: "Oct",
+
+    priceMin: 500,
+    priceMax: 1200,
+
+    programsCount: 5,
+
+    programs: [
+        { id: 1, name: "International Business", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year" },
+        { id: 2, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$900/year" },
+        { id: 3, name: "Law", degree: "Bachelor", field: "Law", duration: "4 years", tuition: "$850/year" },
+        { id: 4, name: "English Studies", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$700/year" },
+        { id: 5, name: "Health Science", degree: "Bachelor", field: "Health", duration: "4 years", tuition: "$950/year" }
+    ],
+
+    students: 3000,
+    type: "Private",
+
+    description: "International University (IU) is one of Cambodia’s established private universities in Phnom Penh offering a wide range of international‑oriented programs in business, technology, law, languages and health sciences."
+},
+{
+    id: 15,
+    name: "CamEd Business School",
+    shortName: "CamEd",
+    image: "https://cam-ed.edu.kh/wp-content/uploads/2025/09/camed-buidling-2025-scaled-800x475.jpg",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQehklNakIQonazmCvM-5F5uPojgP3aUKHnHg&s",
+    location: "Phnom Penh, Cambodia",
+    address: "Phnom Penh, Cambodia",
+    phone: "+855 23 987 6543",
+    website: "https://cam-ed.edu.kh/",
+
+    degree: ["Bachelor", "Master"],
+    admissionDate: "Oct",
+
+    priceMin: 800,
+    priceMax: 1500,
+
+    programsCount: 3,
+
+    programs: [
+        { id: 1, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$1200/year" },
+        { id: 2, name: "Accounting & Finance", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$1300/year" },
+        { id: 3, name: "MBA", degree: "Master", field: "Business", duration: "2 years", tuition: "$1500/year" }
+    ],
+
+    students: 1500,
+    type: "Private",
+
+    description: "CamEd Business School specializes in business and finance programs in Cambodia, offering internationally relevant business degrees with strong professional outcomes."
+},
+{
+    id: 16,
+    name: "University of South‑East Asia",
+    shortName: "USEA",
+    image: "https://www.usea.edu.kh/assets/usea_building-CK_I5vxJ.png",
+    logo: "https://www.usea.edu.kh/assets/logo_update-BeRv3I2d.png",
+    location: "Siem Reap, Cambodia",
+    address: "Siem Reap City, Siem Reap Province, Cambodia",
+    phone: "+855 63 777 888",
+    website: "https://usea.edu.kh/",
+
+    degree: ["Associate", "Bachelor"],
+    admissionDate: "Oct",
+
+    priceMin: 300,
+    priceMax: 800,
+
+    programsCount: 5,
+
+    programs: [
+        { id: 1, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$650/year" },
+        { id: 2, name: "Tourism", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$700/year" },
+        { id: 3, name: "IT", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$750/year" },
+        { id: 4, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$600/year" },
+        { id: 5, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$650/year" }
+    ],
+
+    students: 2200,
+    type: "Private",
+
+    description: "University of South‑East Asia in Siem Reap offers a variety of programs in business, tourism and technology to students in the northwest region of Cambodia."
+}
 
 ];
 
