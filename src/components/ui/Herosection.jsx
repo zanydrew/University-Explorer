@@ -11,10 +11,11 @@ export default function HeroSection({
     return (
         <div className="hero">
             {/* Background layers */}
-            {image
-                ? <img src={image} alt={name} className="hero__img" />
-                : <div className="hero__dots" />
-            }
+            {image ? (
+                <img src={image} alt={name} className="hero__img" />
+            ) : (
+                <div className="hero__dots" />
+            )}
             <div className="hero__dots" />
             <div className="hero__overlay" />
 

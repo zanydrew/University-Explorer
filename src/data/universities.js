@@ -3,133 +3,284 @@ export const UNIVERSITIES = [
         id: 1,
         name: "Royal University of Phnom Penh",
         shortName: "RUPP",
-        image: "https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80",
-        logo: null,
-        location: "Phnom Penh",
-        address: 'Russian Federation Blvd (110), Phnom Penh',
-        phone: '+855 23 880 076',
-        email: 'info@rupp.edu.kh',
-        website: 'https://www.rupp.edu.kh/',
-        degree: ["All Degrees", "Bachelor", "Master", "PhD"],
-        admissionDate: "01-Oct-2026",
-        priceMin: 800, priceMax: 1200,
-        programsCount: 6,
+        image: "https://3.bp.blogspot.com/_oN2ovDH18dI/TNKOkWSZeVI/AAAAAAAAAJU/BMk5LbwR9a8/s1600/rupp.jpg",
+        // image: "https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80",
+        logo: "https://www.rupp.edu.kh/logo/rupp_logo.png",
+        location: "Phnom Penh, Cambodia",
+        address: "Russian Federation Boulevard (110), Toul Kork, Phnom Penh, Cambodia",
+        phone: "+855 23 883 640",
+        email: "info@rupp.edu.kh",
+        website: "https://www.rupp.edu.kh/",
+
+        degree: ["Bachelor", "Master"],
+        admissionDate: "Varies (usually Oct–Nov intake)",
+
+        // Realistic public university pricing (approximate range in Cambodia)
+        priceMin: 300,
+        priceMax: 800,
+
+        programsCount: 7,
+
         programs: [
-            { id: 1, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$12,400/yr", desc: "Covers algorithms, systems, AI, and software engineering fundamentals.", curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] },
-            { id: 2, name: "Artificial Intelligence", degree: "Master", field: "Technology", duration: "2 years", tuition: "$18,200/yr", desc: "Deep dive into ML, neural networks, NLP, and autonomous systems.", curriculum: ["Deep Learning","Natural Language Processing","Computer Vision","Reinforcement Learning","Ethics in AI","Thesis/Capstone"], requirements: ["Bachelor's in CS or related","GPA 3.0+","GRE recommended","Research Statement"], careers: ["ML Engineer","AI Researcher","Data Scientist","AI Product Lead"] },
-            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$10,800/yr", desc: "Broad foundation in management, finance, marketing, and strategy.", curriculum: ["Microeconomics","Financial Accounting","Marketing Fundamentals","Operations Management","Business Ethics","Internship"], requirements: ["GPA 3.2+","SAT 1200+","Essay","Letter of Recommendation"], careers: ["Business Analyst","Project Manager","Consultant","Entrepreneur"] },
-            { id: 4, name: "Data Science", degree: "Master", field: "Technology", duration: "18 months", tuition: "$20,000/yr", desc: "Blends statistics, programming, and domain knowledge to extract insights.", curriculum: ["Statistical Learning","Big Data Engineering","Data Visualization","Predictive Modeling","Cloud Computing","Industry Project"], requirements: ["Quantitative Bachelor's","Python/R proficiency","GPA 3.0+","Portfolio preferred"], careers: ["Data Analyst","Data Engineer","Business Intelligence Lead","Research Scientist"] },
-            { id: 5, name: "International Relations", degree: "Bachelor", field: "Social Sciences", duration: "4 years", tuition: "$9,600/yr", desc: "Study global politics, diplomacy, international law, and economics.", curriculum: ["World Politics","Comparative Government","International Law","Global Economics","Regional Studies","Capstone Thesis"], requirements: ["SAT 1250+","GPA 3.3+","Second language preferred","Motivation Letter"], careers: ["Diplomat","Policy Analyst","NGO Officer","Journalist"] },
-            { id: 6, name: "Clinical Psychology", degree: "PhD", field: "Health Sciences", duration: "5 years", tuition: "$8,000/yr", desc: "Research and clinical training for practicing psychologists.", curriculum: ["Psychopathology","Assessment & Testing","Evidence-Based Therapies","Research Methods","Practicum Hours","Dissertation"], requirements: ["Master's preferred","GPA 3.5+","Research experience","Interview required"], careers: ["Clinical Psychologist","Researcher","Counselor","Academic Faculty"] },
-            { id: 7, name: "Environmental Engineering", degree: "Master", field: "Engineering", duration: "2 years", tuition: "$16,500/yr", desc: "Solve environmental challenges with engineering and sustainability science.", curriculum: ["Water Treatment","Air Quality Control","Waste Management","Environmental Policy","Sustainability Design","Capstone"], requirements: ["Engineering Bachelor's","GPA 3.0+","GRE recommended","Research Interest Statement"], careers: ["Environmental Engineer","Sustainability Consultant","Policy Advisor","Urban Planner"] },
-            { id: 8, name: "Architecture", degree: "Bachelor", field: "Arts & Design", duration: "5 years", tuition: "$13,200/yr", desc: "Design the built environment through creativity, technology, and culture.", curriculum: ["Architectural Design Studio","History of Architecture","Structural Systems","Digital Fabrication","Urban Design","Final Thesis Studio"], requirements: ["Portfolio required","GPA 3.0+","SAT 1200+","Design aptitude test"], careers: ["Architect","Urban Designer","Interior Designer","Real Estate Developer"] },
+            {
+                id: 1,
+                name: "Computer Science",
+                degree: "Bachelor",
+                field: "Technology",
+                duration: "4 years",
+                tuition: "$400–$800/year",
+                desc: "Focuses on programming, software development, and computer systems.",
+            },
+            {
+                id: 2,
+                name: "Information Technology Engineering",
+                degree: "Master",
+                field: "Technology",
+                duration: "2 years",
+                tuition: "$600–$900/year",
+                desc: "Advanced study in IT systems, networking, and software engineering.",
+            },
+            {
+                id: 3,
+                name: "English for Education",
+                degree: "Bachelor",
+                field: "Education",
+                duration: "4 years",
+                tuition: "$300–$600/year",
+                desc: "Training teachers in English language and pedagogy.",
+            },
+            {
+                id: 4,
+                name: "International Studies",
+                degree: "Bachelor",
+                field: "Social Sciences",
+                duration: "4 years",
+                tuition: "$400–$700/year",
+                desc: "Focus on global politics, diplomacy, and international relations.",
+            },
+            {
+                id: 5,
+                name: "Psychology",
+                degree: "Bachelor",
+                field: "Social Sciences",
+                duration: "4 years",
+                tuition: "$400–$700/year",
+                desc: "Study of human behavior, mental processes, and counseling basics.",
+            },
+            {
+                id: 6,
+                name: "Environmental Science",
+                degree: "Bachelor",
+                field: "Science",
+                duration: "4 years",
+                tuition: "$400–$700/year",
+                desc: "Covers ecology, conservation, and environmental management.",
+            },
+            {
+                id: 7,
+                name: "Tourism Development",
+                degree: "Master",
+                field: "Business",
+                duration: "2 years",
+                tuition: "$600–$900/year",
+                desc: "Focus on sustainable tourism and hospitality management.",
+            }
         ],
-        students: 18000,
+
+        students: 30000, // updated
         type: "Public",
-        accreditation: 'Ministry of Education, Youth and Sport',
-        description: "Cambodia's premier public university, founded in 1960, offering a wide range of undergraduate and postgraduate programs across sciences, humanities, and social sciences.",
-        majors: ["Computer Science & Engineering", "Environmental Science", "Business Administration", "International Relations", "Public Health", "Information Technology"],
-        eligibility: ["Applicants must be under 35 years of age", "Bachelor's degree with a minimum GPA of 3.2 / 4.0", "At least 1 year of relevant work or research experience", "English proficiency: IELTS 6.5+ or TOEFL iBT 80+", "Citizen of an ASEAN member state"],
-        documents: ["Updated CV/Resume (max 2 pages)", "Official academic transcripts (certified copy)", "Two academic recommendation letters", "Valid passport (at least 18 months validity)", "Personal statement (500–800 words)", "English proficiency test score report"],
-        steps: ["Visit the official AUN scholarship portal at aun.org/scholarship", "Create a personal account using your institutional email address", "Complete the online application form with accurate details", "Upload all required supporting documents in PDF format", "Review your application and submit before the deadline"],
+
+        accreditation: "Ministry of Education, Youth and Sport (Cambodia)",
+
+        description: "The Royal University of Phnom Penh, founded in 1960, is the oldest and largest public university in Cambodia. It offers a wide range of programs in science, social sciences, humanities, engineering, and languages, and is a member of the ASEAN University Network.",
+
+        majors: [
+            "Computer Science",
+            "Information Technology",
+            "Environmental Science",
+            "Psychology",
+            "International Studies",
+            "Education",
+            "Tourism Development"
+        ],
+
+        eligibility: [
+            "High school diploma or equivalent",
+            "Pass national Bac II exam (for Cambodian students)",
+            "Meet university-specific requirements for chosen program"
+        ],
+
+        documents: [
+            "High school diploma / transcripts",
+            "Application form",
+            "Passport or national ID",
+            "Photos",
+        ],
+
+        steps: [
+            "Visit the official RUPP website or campus",
+            "Fill out the application form",
+            "Submit required documents",
+            "Pay registration fee",
+            "Wait for admission confirmation",
+        ]
     },
     {
         id: 2,
         name: "Institute of Technology of Cambodia",
         shortName: "ITC",
-        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200&q=80",
-        logo: null,
-        location: "Phnom Penh",
-        address: 'Russian Federation Blvd (110), Phnom Penh',
-        phone: '+855 23 880 076',
-        email: 'info@rupp.edu.kh',
-        website: 'https://itc.edu.kh/',
-        degree: ["All Degrees", "Bachelor", "Master", "PhD"],
-        admissionDate: "01-Oct-2026",
-        priceMin: 600, priceMax: 950,
+        image: "https://itc.edu.kh/wp-content/uploads/2022/02/photo_2022-02-04_08-54-18.jpg",
+        logo: "https://itc.edu.kh/wp-content/uploads/2021/02/cropped-Logo-ITC.png",
+
+        location: "Phnom Penh, Cambodia",
+        address: "Russian Federation Blvd (110), Toul Kork, Phnom Penh",
+        phone: "+855 23 880 370",
+        email: "info@itc.edu.kh",
+        website: "https://itc.edu.kh/",
+
+        degree: ["Bachelor", "Engineer", "Master"],
+        admissionDate: "Around Oct–Nov (after Bac II)",
+
+        priceMin: 0,
+        priceMax: 600, // many are scholarship-based
+
         programsCount: 6,
+
         programs: [
-            { id: 1, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$12,400/yr", desc: "Covers algorithms, systems, AI, and software engineering fundamentals.", curriculum: ["Algorithms & Data Structures","Operating Systems","Machine Learning","Software Engineering","Computer Networks","Capstone Project"], requirements: ["SAT 1300+","GPA 3.5+","Math & Science prerequisites","Statement of Purpose"], careers: ["Software Engineer","Data Scientist","Product Manager","CTO / Startup Founder"] },
-            { id: 2, name: "Artificial Intelligence", degree: "Master", field: "Technology", duration: "2 years", tuition: "$18,200/yr", desc: "Deep dive into ML, neural networks, NLP, and autonomous systems.", curriculum: ["Deep Learning","Natural Language Processing","Computer Vision","Reinforcement Learning","Ethics in AI","Thesis/Capstone"], requirements: ["Bachelor's in CS or related","GPA 3.0+","GRE recommended","Research Statement"], careers: ["ML Engineer","AI Researcher","Data Scientist","AI Product Lead"] },
-            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$10,800/yr", desc: "Broad foundation in management, finance, marketing, and strategy.", curriculum: ["Microeconomics","Financial Accounting","Marketing Fundamentals","Operations Management","Business Ethics","Internship"], requirements: ["GPA 3.2+","SAT 1200+","Essay","Letter of Recommendation"], careers: ["Business Analyst","Project Manager","Consultant","Entrepreneur"] },
-            { id: 4, name: "Data Science", degree: "Master", field: "Technology", duration: "18 months", tuition: "$20,000/yr", desc: "Blends statistics, programming, and domain knowledge to extract insights.", curriculum: ["Statistical Learning","Big Data Engineering","Data Visualization","Predictive Modeling","Cloud Computing","Industry Project"], requirements: ["Quantitative Bachelor's","Python/R proficiency","GPA 3.0+","Portfolio preferred"], careers: ["Data Analyst","Data Engineer","Business Intelligence Lead","Research Scientist"] },
-            { id: 5, name: "International Relations", degree: "Bachelor", field: "Social Sciences", duration: "4 years", tuition: "$9,600/yr", desc: "Study global politics, diplomacy, international law, and economics.", curriculum: ["World Politics","Comparative Government","International Law","Global Economics","Regional Studies","Capstone Thesis"], requirements: ["SAT 1250+","GPA 3.3+","Second language preferred","Motivation Letter"], careers: ["Diplomat","Policy Analyst","NGO Officer","Journalist"] },
-            { id: 6, name: "Clinical Psychology", degree: "PhD", field: "Health Sciences", duration: "5 years", tuition: "$8,000/yr", desc: "Research and clinical training for practicing psychologists.", curriculum: ["Psychopathology","Assessment & Testing","Evidence-Based Therapies","Research Methods","Practicum Hours","Dissertation"], requirements: ["Master's preferred","GPA 3.5+","Research experience","Interview required"], careers: ["Clinical Psychologist","Researcher","Counselor","Academic Faculty"] },
-            { id: 7, name: "Environmental Engineering", degree: "Master", field: "Engineering", duration: "2 years", tuition: "$16,500/yr", desc: "Solve environmental challenges with engineering and sustainability science.", curriculum: ["Water Treatment","Air Quality Control","Waste Management","Environmental Policy","Sustainability Design","Capstone"], requirements: ["Engineering Bachelor's","GPA 3.0+","GRE recommended","Research Interest Statement"], careers: ["Environmental Engineer","Sustainability Consultant","Policy Advisor","Urban Planner"] },
-            { id: 8, name: "Architecture", degree: "Bachelor", field: "Arts & Design", duration: "5 years", tuition: "$13,200/yr", desc: "Design the built environment through creativity, technology, and culture.", curriculum: ["Architectural Design Studio","History of Architecture","Structural Systems","Digital Fabrication","Urban Design","Final Thesis Studio"], requirements: ["Portfolio required","GPA 3.0+","SAT 1200+","Design aptitude test"], careers: ["Architect","Urban Designer","Interior Designer","Real Estate Developer"] },
+            { id: 1, name: "Civil Engineering", degree: "Engineer", field: "Engineering", duration: "5 years", tuition: "Free–$500/year", desc: "Focus on construction, structures, and infrastructure." },
+            { id: 2, name: "Electrical Engineering", degree: "Engineer", field: "Engineering", duration: "5 years", tuition: "Free–$500/year", desc: "Covers power systems and electronics." },
+            { id: 3, name: "Mechanical Engineering", degree: "Engineer", field: "Engineering", duration: "5 years", tuition: "Free–$500/year", desc: "Focus on machines, thermodynamics, and design." },
+            { id: 4, name: "Chemical Engineering", degree: "Engineer", field: "Engineering", duration: "5 years", tuition: "Free–$500/year", desc: "Covers industrial chemical processes." },
+            { id: 5, name: "Information & Communication Engineering", degree: "Engineer", field: "Technology", duration: "5 years", tuition: "Free–$500/year", desc: "Focus on IT systems and telecommunications." },
+            { id: 6, name: "Environmental Engineering", degree: "Engineer", field: "Engineering", duration: "5 years", tuition: "Free–$500/year", desc: "Focus on sustainability and environment." }
         ],
-        students: 8500,
-        type: "Technical",
-        accreditation: 'Ministry of Education, Youth and Sport',
-        description: "The ITC Engineering Excellence Award supports talented Cambodian students pursuing engineering and technology disciplines. This partial scholarship reduces financial barriers and is awarded to students who show strong analytical ability and a drive to contribute to Cambodia's growing tech sector.",
-        majors: ["All Majors", "Civil Engineering", "Electrical Engineering", "Mechanical Engineering", "Chemical Engineering", "Information & Communication Technology", "Environmental Engineering", "Industrial Engineering", "Architecture", "Urban Planning"],
-        eligibility: ["Cambodian citizen aged 17–25", "High school diploma with A or B average in STEM subjects", "Pass the ITC entrance examination", "English or French proficiency preferred"],
-        documents: ["Completed application form", "High school academic records", "National ID or birth certificate", "One recommendation letter from a teacher", "Statement of intent (300–500 words)"],
-        steps: ["Download the application form from ITC's official website", "Fill in all fields with accurate personal and academic information", "Gather required supporting documents", "Submit physical documents to the ITC admissions office", "Attend the scholarship interview if shortlisted"],
+
+        students: 4000,
+        type: "Public",
+
+        accreditation: "Ministry of Education, Youth and Sport",
+
+        description: "ITC (Sala Techno) is Cambodia’s top engineering university, known for competitive entrance exams and strong technical training.",
+
+        majors: ["Civil", "Electrical", "Mechanical", "Chemical", "ICT", "Environmental Engineering"],
+
+        eligibility: [
+            "Pass Bac II exam",
+            "Pass ITC entrance exam",
+            "Strong background in Math & Physics"
+        ],
+
+        documents: [
+            "Application form",
+            "Bac II certificate",
+            "Transcript",
+            "ID card",
+            "Photos"
+        ],
+
+        steps: [
+            "Register for ITC entrance exam",
+            "Take exam",
+            "Wait for results",
+            "Submit documents",
+            "Enroll"
+        ]
     },
     {
         id: 3,
         name: "Chea Sim University of Kamchaymear",
         shortName: "CSUK",
-        logo: null,
-        location: "Prey Veng",
-        address: 'Kamchay Mear District, Prey Veng Province',
+        image: "https://itc.edu.kh/wp-content/uploads/2022/02/photo_2022-02-04_08-54-18.jpg",
+        logo: "https://www.developmentaid.org/files/organizationLogos/chea-sim-university-of-kamchaymear-129296.jpg",
+
+        location: "Prey Veng, Cambodia",
+        address: "Kamchay Mear District, Prey Veng Province",
         phone: "+855 23 220 182",
         email: "info@csuk.edu.kh",
-        website: "https://nuck.edu.kh/?lang=en",
-        degree: ["Bachelor(limited programs)","Master"],
-        admissionDate: "Around October – November each year",
-        priceMin: 300, priceMax: 800,
-        programsCount: 6,
-        programs: [
-            { id: 1, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$500/yr", desc: "Focuses on programming, systems, and basic AI concepts.", curriculum: ["Programming Fundamentals","Data Structures","Database Systems","Web Development","Software Engineering","Final Year Project" ], requirements: ["High school diploma", "Math background","Entrance exam"],careers: [  "Software Developer","Web Developer", "IT Support","System Analyst" ]},
-            { id: 2, name: "Information Technology",degree: "Bachelor",field: "Technology", duration: "4 years",tuition: "$450/yr",  desc: "Practical IT skills including networking and system administration.", curriculum: [ "Networking Basics", "Cybersecurity Fundamentals","Database Management","Cloud Computing", "IT Project Management"], requirements: ["High school diploma","Basic computer knowledge" ],  careers: [ "IT Officer", "Network Administrator", "System Support Specialist" ]},
-            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business",duration: "4 years",tuition: "$400/yr",desc: "Covers management, marketing, and entrepreneurship.",curriculum: ["Principles of Management","Marketing","Accounting","Business Law","Entrepreneurship"],  requirements: ["High school diploma","Basic English" ], careers: [ "Business Manager", "Entrepreneur", "Sales Executive"] },
-            { id: 4, name: "Accounting & Finance", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$420/yr", desc: "Focuses on financial reporting and business finance.", curriculum: ["Financial Accounting","Cost Accounting", "Auditing","Taxation","Corporate Finance"],  requirements: [ "High school diploma", "Math skills" ], careers: [ "Accountant", "Auditor", "Finance Officer"]},
-            { id: 5, name: "Agronomy", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$350/yr", desc: "Agricultural science focusing on crops and rural development.", curriculum: [ "Soil Science", "Crop Production", "Irrigation Systems", "Sustainable Agriculture", "Field Practice" ],requirements: [ "High school diploma", "Interest in agriculture" ], careers: [ "Agricultural Officer", "Farm Manager", "Research Assistant"]},
-            { id: 6, name: "English Language & Education", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$380/yr", desc: "Prepares students for teaching English and communication roles.", curriculum: [ "English Grammar", "Teaching Methodology", "Linguistics", "Classroom Management", "Teaching Practice"],  requirements: [ "High school diploma", "Basic English proficiency" ], careers: ["English Teacher","Translator","Trainer"]},
+        website: "https://csuk.edu.kh/",
 
+        degree: ["Associate", "Bachelor"],
+        admissionDate: "Oct–Nov",
+
+        priceMin: 250,
+        priceMax: 600,
+
+        programsCount: 6,
+
+        programs: [
+            { id: 1, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$400/year", desc: "Basic programming and systems." },
+            { id: 2, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$350/year", desc: "Networking and IT support." },
+            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$350/year", desc: "Management and entrepreneurship." },
+            { id: 4, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$350/year", desc: "Financial accounting and auditing." },
+            { id: 5, name: "Agronomy", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$300/year", desc: "Crop science and farming." },
+            { id: 6, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$300/year", desc: "English teaching and communication." }
         ],
+
         students: 3000,
         type: "Public",
+
         accreditation: "Ministry of Education, Youth and Sport",
-        description: "Chea Sim University of Kamchaymear provides affordable higher education to students in rural Cambodia, focusing on practical skills and community development.",
-        majors: [ "Computer Science", "Information Technology", "Business Administration", "Accounting & Finance", "Agronomy", "English Education"],
-        eligibility: [ "Cambodian citizen or eligible international student", "High school diploma", "Pass entrance exam (if required)" ],
-        documents: ["Application form","High school certificate","Transcript","ID card or passport","Photos"],
-        steps: [ "Choose program", "Prepare documents", "Submit application", "Take entrance exam (if required)", "Wait for result", "Enroll and pay tuition"],
+
+        description: "CSUK provides affordable education for rural students with a focus on practical and community-based skills.",
+
+        majors: ["IT", "Business", "Accounting", "Agriculture", "English"],
+
+        eligibility: [
+            "High school diploma",
+            "Pass entrance exam (if required)"
+        ],
+
+        documents: [
+            "Application form",
+            "High school certificate",
+            "Transcript",
+            "ID card"
+        ],
+
+        steps: ["Apply", "Submit documents", "Enroll"]
     },
     {
         id: 4,
-        name: "Prek Leap National Institute of Agriculture",
+        name: "National Institute of Agriculture",
         shortName: "NIA",
-        image: "https://images.unsplash.com/photo-1592982537447-6f2a6a0c8f3a?w=1200&q=80",
-        logo: null,
-        location: "Phnom Penh,",
-        address: "National Road 6A, Prek Leap, Chroy Changvar, Phnom Penh, Cambodia",
+        image: "https://i.ytimg.com/vi/GAYkmWGFp10/maxresdefault.jpg",
+        logo: "https://cambodianbamboostudies.com/assets/img/nia-logo.png",
+        location: "Phnom Penh, Cambodia",
+        address: "Prek Leap, Chroy Changvar, Phnom Penh",
         phone: "+855 23 428 167",
         email: "info@nia.gov.kh",
-        website: "www.nia.gov.kh",
-        degree: ["All Degrees", "Bachelor", "Master"],
-        admissionDate: "01-Nov-2026",
-        priceMin: 300,priceMax: 1200,
-        programsCount: 6,
+        website: "http://www.nia.gov.kh/",
+
+        degree: ["Associate", "Bachelor"],
+        admissionDate: "Nov",
+
+        priceMin: 200,
+        priceMax: 600,
+
+        programsCount: 5,
+
         programs: [
-            { id: 1, name: "Agronomy", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$1,200/yr", desc: "Focuses on crop production, soil science, and sustainable agriculture.",  curriculum: [ "Soil Science", "Crop Production", "Plant Protection", "Irrigation Systems", "Sustainable Agriculture", "Field Practice"],requirements: [ "High school diploma","Science background", "Entrance exam" ], careers: [ "Agronomist", "Farm Manager", "Agricultural Officer" ]},
-            { id: 2, name: "Animal Science", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$1,200/yr", desc: "Study livestock production, nutrition, and animal health.", curriculum: [ "Animal Nutrition", "Livestock Production", "Veterinary Basics", "Animal Breeding", "Disease Control"], requirements: [ "High school diploma", "Biology background" ], careers: [ "Animal Technician", "Farm Supervisor", "Veterinary Assistant" ]},
-            { id: 3, name: "Agricultural Engineering", degree: "Bachelor", field: "Engineering", duration: "4 years", tuition: "$1,200/yr", desc: "Applies engineering principles to agriculture and rural systems.", curriculum: [ "Farm Machinery", "Irrigation Engineering", "Soil Mechanics", "Rural Construction", "Agricultural Technology"], requirements: [ "Math & Physics background", "High school diploma"], careers: [ "Agricultural Engineer", "Irrigation Specialist", "Project Engineer" ]},
-            { id: 4, name: "Fisheries Science", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$1,200/yr", desc: "Focuses on aquaculture and aquatic resource management.", curriculum: [ "Aquaculture", "Fish Biology", "Water Quality", "Fisheries Management","Aquatic Ecology"], requirements: ["High school diploma","Interest in fisheries"], careers: [ "Fisheries Officer", "Aquaculture Specialist", "Environmental Officer"]},
-            { id: 5, name: "Agribusiness Management", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$1,000/yr", desc: "Combines agriculture with business and management skills.", curriculum: [ "Agricultural Economics", "Marketing", "Supply Chain", "Farm Management","Entrepreneurship"],  requirements: [ "High school diploma", "Basic math skills" ], careers: [ "Agribusiness Manager", "Supply Chain Officer","Entrepreneur"]},
-            { id: 6, name: "Food Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$1,100/yr", desc: "Focuses on food processing, safety, and quality control.", curriculum: [ "Food Chemistry", "Food Safety", "Processing Technology", "Packaging","Quality Control"], requirements: [ "High school diploma", "Science background"], careers: [ "Food Technologist", "Quality Control Officer", "Production Manager"]},
+            { id: 1, name: "Agronomy", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$400/year", desc: "Crop production and soil science." },
+            { id: 2, name: "Animal Science", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$400/year", desc: "Livestock production." },
+            { id: 3, name: "Agricultural Engineering", degree: "Bachelor", field: "Engineering", duration: "4 years", tuition: "$500/year", desc: "Engineering for farming systems." },
+            { id: 4, name: "Fisheries", degree: "Bachelor", field: "Agriculture", duration: "4 years", tuition: "$400/year", desc: "Aquaculture and fisheries." },
+            { id: 5, name: "Agribusiness", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$400/year", desc: "Agricultural business." }
         ],
-        students: 2500,
-        type: "Agriculture",
-        accreditation: "Ministry of Agriculture, Forestry and Fisheries",
-        description: "Prek Leap National Institute of Agriculture is one of Cambodia’s leading institutions specializing in agriculture, fisheries, and rural development, providing practical and research-based education to support the country’s agricultural sector.",
-        majors: [ "All Majors", "Agronomy", "Animal Science", "Agricultural Engineering", "Fisheries Science", "Agribusiness", "Food Technology"],
-        eligibility: [ "Cambodian citizen or eligible international student", "High school diploma", "Pass entrance exam","Science background preferred"],
-        documents: [ "Completed application form", "High school academic records", "ID card or passport", "Photos"],
-        steps: [ "Choose program", "Prepare documents", "Submit application", "Take entrance exam", "Wait for admission result","Complete enrollment"]
+
+        students: 9300,
+        type: "Public",
+
+        accreditation: "Ministry of Agriculture",
+
+        description: "NIA specializes in agriculture and rural development, supporting Cambodia’s farming sector.",
+
+        majors: ["Agronomy", "Animal Science", "Fisheries", "Agribusiness"],
+
+        eligibility: ["High school diploma"],
+
+        documents: ["Application form", "Transcript", "ID"],
+
+        steps: ["Apply", "Submit docs", "Enroll"]
     },
 
 
@@ -137,105 +288,104 @@ export const UNIVERSITIES = [
         id: 5,
         name: "Royal University of Fine Arts",
         shortName: "RUFA",
-        image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=1200&q=80",
-        logo: null,
-        location: "Phnom Penh",
-        address: "No. 72, Street 19 (Preah Ang Yukunthor), Sangkat Chey Chumneas, Khan Daun Penh, Phnom Penh, Cambodia",
+        image: "https://c8.alamy.com/comp/MMYJNM/royal-university-of-fine-arts-phnom-penh-cambodia-MMYJNM.jpg",
+        logo: "        https://www.standyou.com/uploads/20230926151124_file_RC.png",
+        location: "Phnom Penh, Cambodia",
+        address: "Street 19, Daun Penh, Phnom Penh",
         phone: "+855 23 986 417",
-        email: "rufa@camnet.com.kh",
-        website: "www.rufa.edu.kh",
-        degree: ["All Degrees", "Bachelor", "Master"],
-        admissionDate: "01-Oct-2026",
-        priceMin: 500, priceMax: 1500,
-        programsCount: 6,
+        website: "http://www.rufa.edu.kh/",
+
+        degree: ["Bachelor"],
+        admissionDate: "Oct",
+
+        priceMin: 400,
+        priceMax: 1000,
+
+        programsCount: 5,
+
         programs: [
-            { id: 1, name: "Architecture", degree: "Bachelor", field: "Arts & Design", duration: "5 years", tuition: "$1,200/yr", desc: "Focuses on architectural design, urban planning, and cultural heritage.", curriculum: [ "Architectural Design Studio", "History of Architecture", "Structural Systems", "Urban Design", "Building Materials","Final Thesis Project"],requirements: [ "High school diploma", "Portfolio required", "Entrance exam"], careers: [ "Architect", "Urban Planner", "Interior Designer"]},
-            { id: 2, name: "Fine Arts (Painting & Sculpture)", degree: "Bachelor", field: "Arts & Design", duration: "4 years", tuition: "$800/yr", desc: "Develops artistic skills in painting, sculpture, and visual expression.", curriculum: [ "Drawing", "Painting Techniques", "Sculpture", "Art History", "Creative Studio", "Exhibition Project"], requirements: [ "Portfolio required", "Art aptitude test","High school diploma" ], careers: [ "Artist", "Art Teacher", "Gallery Curator" ]},
-            { id: 3, name: "Graphic Design", degree: "Bachelor", field: "Arts & Design", duration: "4 years", tuition: "$900/yr", desc: "Combines creativity and digital tools for visual communication.", curriculum: [ "Typography","Digital Design","Branding","Illustration","Multimedia Design","Portfolio Project"], requirements: ["Portfolio required", "Basic computer skills"], careers: [ "Graphic Designer", "UI/UX Designer", "Creative Director"]},
-            { id: 4, name: "Performing Arts (Dance & Theater)", degree: "Bachelor", field: "Arts", duration: "4 years", tuition: "$700/yr", desc: "Training in traditional and modern performance arts.", curriculum: [ "Dance Techniques", "Acting", "Music Fundamentals", "Stage Performance", "Cultural Studies", "Final Performance"],  requirements: [ "Audition required", "Physical fitness", "High school diploma"], careers: [ "Performer", "Choreographer", "Theater Artist"] },
-            { id: 5, name: "Archaeology", degree: "Bachelor", field: "Social Sciences", duration: "4 years", tuition: "$850/yr", desc: "Study ancient cultures, heritage preservation, and excavation methods.", curriculum: [ "Archaeological Methods", "Ancient Civilizations", "Field Excavation","Cultural Heritage","Museum Studies"],  requirements: [ "High school diploma", "Interest in history"], careers: [ "Archaeologist", "Museum Curator", "Heritage Officer"]},
-            { id: 6, name: "Urban Planning", degree: "Master", field: "Engineering", duration: "2 years", tuition: "$1,500/yr", desc: "Focuses on sustainable city development and planning.", curriculum: [ "Urban Design", "Land Use Planning", "Environmental Planning", "GIS Applications", "Research Thesis"], requirements: ["Bachelor’s degree","GPA 2.5+","Interview"], careers: [ "Urban Planner", "Policy Advisor", "Development Consultant"]},
+            { id: 1, name: "Architecture", degree: "Bachelor", field: "Design", duration: "5 years", tuition: "$800/year", desc: "Architecture and urban design." },
+            { id: 2, name: "Fine Arts", degree: "Bachelor", field: "Arts", duration: "4 years", tuition: "$600/year", desc: "Painting and sculpture." },
+            { id: 3, name: "Graphic Design", degree: "Bachelor", field: "Design", duration: "4 years", tuition: "$700/year", desc: "Visual communication design." },
+            { id: 4, name: "Performing Arts", degree: "Bachelor", field: "Arts", duration: "4 years", tuition: "$600/year", desc: "Dance and theater." },
+            { id: 5, name: "Archaeology", degree: "Bachelor", field: "Social Sciences", duration: "4 years", tuition: "$700/year", desc: "Cultural heritage studies." }
         ],
 
         students: 2000,
-        type: "Arts",
-        accreditation: "Ministry of Education, Youth and Sport",
-        description: "Royal University of Fine Arts is Cambodia’s leading institution for arts, culture, and heritage studies, offering specialized programs in fine arts, architecture, and performing arts.",
-        majors: ["All Majors","Architecture","Fine Arts","Graphic Design","Performing Arts", "Archaeology","Urban Planning" ],
-        eligibility: [ "Cambodian citizen or eligible international student", "High school diploma","Portfolio or audition (for arts programs)","Entrance exam or interview"],
-        documents: ["Completed application form","High school certificate", "Transcript","Portfolio (if required)","ID card or passport","Photos" ],
-        steps: ["Choose program", "Prepare portfolio (if needed)","Submit application","Take entrance exam or audition","Wait for results","Enroll and pay tuition"]
+        type: "Public",
+
+        accreditation: "Ministry of Education",
+
+        description: "RUFA is Cambodia’s leading institution for arts, culture, and heritage.",
+
+        eligibility: ["High school diploma", "Portfolio / audition (some programs)"]
     },
 
     {
         id: 6,
         name: "Vanda Institute",
         shortName: "VI",
-        image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80",
-        logo: null,
-        location: "Phnom Penh",
-        address: "No. 216-218, Mao Tse Toung Blvd (245), Khan Chamkar Mon, Phnom Penh, Cambodia",
+        image: "https://cccbic.org/businesses-covers/4-cover.jpg",
+        logo: "        https://www.puthisastra.edu.kh/wp-content/uploads/2019/01/14.vanda_.png",
+        location: "Phnom Penh, Cambodia",
+        address: "Mao Tse Toung Blvd, Phnom Penh",
         phone: "+855 23 213 563",
-        email: "vandaacc@yahoo.com",
-        website: "www.vanda.edu.kh",
-        degree: ["All Degrees", "Bachelor", "Master", "PhD"],
-        admissionDate: "01-Oct-2026",
-        priceMin: 400,priceMax: 2500,
-        programsCount: 6,
-        programs: [
-            { id: 1, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$900/yr", desc: "Focuses on financial reporting, auditing, and taxation.", curriculum: [ "Financial Accounting", "Cost Accounting", "Auditing","Taxation","Corporate Finance","Internship"], requirements: [ "High school diploma","Math background","Entrance exam"],careers: [ "Accountant", "Auditor","Tax Consultant","Finance Officer"]},
-            { id: 2, name: "Finance & Banking",degree: "Bachelor", field: "Business",duration: "4 years",tuition: "$1,000/yr",desc: "Covers financial systems, banking operations, and investment.", curriculum: [ "Financial Management","Banking Operations", "Investment Analysis","Risk Management","International Finance"], requirements: ["High school diploma", "Basic math skills"],careers: [ "Bank Officer","Financial Analyst","Investment Advisor"]},
-            { id: 3, name: "Business Administration",degree: "Bachelor",field: "Business",duration: "4 years",tuition: "$950/yr",desc: "Provides a broad foundation in management and entrepreneurship.",curriculum: ["Management Principles", "Marketing","Human Resource Management", "Operations Management","Entrepreneurship"], requirements: ["High school diploma","Basic English"],careers: ["Business Manager", "Entrepreneur","Project Manager"] },
-            { id: 4, name: "Information Technology", degree: "Bachelor",field: "Technology",duration: "4 years", tuition: "$1,200/yr", desc: "Focuses on software development, networking, and IT systems.", curriculum: ["Programming","Database Systems","Networking","Web Development","System Analysis" ], requirements: ["High school diploma","Basic computer skills"],careers: ["Software Developer","IT Support","System Administrator"]},
-            { id: 5, name: "Tourism & Hospitality Management",degree: "Bachelor", field: "Business",duration: "4 years",tuition: "$850/yr",desc: "Prepares students for careers in tourism and hospitality industry.",curriculum: ["Hospitality Management", "Tourism Marketing","Customer Service","Event Management","Internship"], requirements: ["High school diploma","Communication skills"],careers: ["Hotel Manager","Tourism Officer","Event Planner"]},
-            { id: 6,name: "Law",degree: "Bachelor", field: "Social Sciences",duration: "4 years", tuition: "$1,100/yr",desc: "Focuses on legal systems, civil and criminal law.",curriculum: [ "Civil Law","Criminal Law","Business Law","International Law", "Legal Practice"], requirements: [ "High school diploma","Interest in law"], careers: ["Lawyer","Legal Advisor","Government Officer"]},
+        website: "http://www.vanda.edu.kh/",
 
+        degree: ["Associate", "Bachelor", "Master"],
+        admissionDate: "Oct",
+
+        priceMin: 400,
+        priceMax: 1200,
+
+        programsCount: 5,
+
+        programs: [
+            { id: 1, name: "Accounting", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$900/year" },
+            { id: 2, name: "Finance & Banking", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$1000/year" },
+            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$900/year" },
+            { id: 4, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$1000/year" },
+            { id: 5, name: "Tourism", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year" }
         ],
 
         students: 5000,
         type: "Private",
-        accreditation: "Ministry of Education, Youth and Sport",
-        description: "Vanda Institute is a well-known private university in Cambodia specializing in business, finance, and professional education, providing practical skills for careers in the corporate and public sectors.",
-        majors: ["All Majors","Accounting","Finance & Banking", "Business Administration","Information Technology","Tourism & Hospitality","Law"],
-        eligibility: ["Cambodian citizen or eligible international student", "High school diploma","Pass entrance exam (if required)"],
-        documents: ["Completed application form","High school certificate", "Transcript","ID card or passport","Photos"],
-        steps: ["Choose program","Prepare documents", "Submit application","Take entrance exam (if required)","Wait for admission result", "Enroll and pay tuition"]
+
+        description: "Vanda Institute is a well-known private university specializing in business and finance."
     },
 
     {
         id: 7,
         name: "Angkor University",
         shortName: "AU",
-        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=80",
-        logo: null,
-        location: "Siem Reap",
-        address: "Borey Seang Nam, Khnar Village, Sangkat Chhreav, Siem Reap City, Cambodia",
-        phone: "+855 17 671 825 / +855 70 853 537",
-        email: "info@angkor.edu.kh",
-        website: "www.angkor.edu.kh",
-        degree: ["All Degrees", "Associate", "Bachelor", "Master"],
-        admissionDate: "01-Oct-2026",
-        priceMin: 400,priceMax: 1500,
-        programsCount: 6,
-        programs: [
-            { id: 1, name: "Computer Science",degree: "Bachelor",field: "Technology",duration: "4 years",tuition: "$900/yr",desc: "Focuses on programming, systems, and software development.",curriculum: ["Programming Fundamentals","Data Structures","Database Systems","Operating Systems","Software Engineering","Final Project"],requirements: ["High school diploma","Math background","Entrance exam"],careers: ["Software Developer","Web Developer","IT Officer"]},
-            { id: 2,name: "Information Technology",degree: "Bachelor",field: "Technology",duration: "4 years",tuition: "$850/yr",desc: "Covers networking, systems, and IT management.",curriculum: ["Networking","Cybersecurity Basics","Database Management","Web Development","Cloud Computing"], requirements: ["High school diploma","Basic computer knowledge"],careers: ["Network Administrator","IT Support","System Analyst"]},
-            { id: 3,name: "Business Administration",degree: "Bachelor",field: "Business",duration: "4 years", tuition: "$800/yr",desc: "Provides foundation in management, marketing, and finance.", curriculum: ["Management Principles","Marketing","Accounting","Human Resource Management","Entrepreneurship"], requirements: [ "High school diploma","Basic English"], careers: ["Business Manager","Entrepreneur","Project Manager"]},
-            { id: 4, name: "Tourism & Hospitality Management",degree: "Bachelor", field: "Business",duration: "4 years",tuition: "$750/yr",desc: "Focuses on tourism industry and hospitality services.",curriculum: ["Tourism Management","Hospitality Operations","Customer Service","Event Management", "Internship"],requirements: ["High school diploma","Communication skills"],careers: ["Hotel Manager","Tourism Officer","Event Planner"]},
-            { id: 5,name: "English Literature", degree: "Bachelor",field: "Education", duration: "4 years", tuition: "$700/yr",desc: "Develops English language skills and teaching abilities.",curriculum: [ "English Grammar","Literature Studies","Linguistics","Teaching Methodology", "Public Speaking"],requirements: ["High school diploma","Basic English proficiency"],careers: ["English Teacher","Translator","Trainer"]},
-            { id: 6,name: "Agriculture",degree: "Bachelor",field: "Agriculture", duration: "4 years",tuition: "$700/yr",desc: "Focuses on crop production and agricultural development.", curriculum: ["Soil Science", "Crop Production","Irrigation","Agricultural Economics", "Field Practice"], requirements: ["High school diploma","Interest in agriculture"], careers: ["Agricultural Officer","Farm Manager", "Research Assistant"]}
+        image: "https://angkor.edu.kh/assets/images/au2024.jpg",
+        logo: "https://www.standyou.com/uploads/20230926163555_file_AU.jpeg",
+        location: "Siem Reap, Cambodia",
+        address: "Siem Reap City",
+        phone: "+855 17 671 825",
+        website: "http://www.angkor.edu.kh/",
 
+        degree: ["Associate", "Bachelor"],
+        admissionDate: "Oct",
+
+        priceMin: 400,
+        priceMax: 1000,
+
+        programsCount: 5,
+
+        programs: [
+            { id: 1, name: "Computer Science", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$900/year" },
+            { id: 2, name: "Information Technology", degree: "Bachelor", field: "Technology", duration: "4 years", tuition: "$850/year" },
+            { id: 3, name: "Business Administration", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$800/year" },
+            { id: 4, name: "Tourism & Hospitality", degree: "Bachelor", field: "Business", duration: "4 years", tuition: "$750/year" },
+            { id: 5, name: "English", degree: "Bachelor", field: "Education", duration: "4 years", tuition: "$700/year" }
         ],
 
         students: 4000,
         type: "Private",
-        accreditation: "Ministry of Education, Youth and Sport",
-        description: "Angkor University is a multidisciplinary private university in Siem Reap offering programs in business, technology, education, and agriculture, with a focus on practical skills and regional development.",
-        majors: ["All Majors","Computer Science","Information Technology","Business Administration", "Tourism & Hospitality","English","Agriculture"],
-        eligibility: ["Cambodian citizen or eligible international student","High school diploma","Pass entrance exam (if required)"],
-        documents: ["Completed application form","High school certificate", "Transcript","ID card or passport","Photos"],
-        steps: ["Choose program","Prepare documents","Submit application","Take entrance exam (if required)","Wait for result","Enroll and pay tuition"]}
 
+        description: "Angkor University provides practical education in business, IT, and tourism in Siem Reap."
+    },
 
 ];
 

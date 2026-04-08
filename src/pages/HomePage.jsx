@@ -99,7 +99,7 @@ export default function HomePage({
             <SectionHeader
                 icon={<TrendingUp size={20} />}
                 title="Popular Universities"
-                sub="Most searched by students this month"
+                // sub="Most searched by students this month"
                 onMore={() => setPage('universities')}
             />
             <div className="home-grid-3">

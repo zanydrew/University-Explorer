@@ -8,7 +8,13 @@ export default function SidebarCard({ logo, badge, name, meta, stats = [], websi
         <div className="sidebar-card">
             {/* ── Gradient header ── */}
             <div className="sidebar-card__top">
-                <div className="sidebar-card__logo">{logo}</div>
+                <div className="sidebar-card__logo">
+                    {logo?.startsWith('http') ? (
+                        <img src={logo} alt={name} />
+                    ) : (
+                        <span>{logo}</span>
+                    )}
+                </div>
 
                 <div className="sidebar-card__badge">
                     <GraduationCap size={10} /> {badge}

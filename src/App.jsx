@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import { useWishlist }          from './hooks/useWishlist'
 import DetailPage from "./pages/DetailPage.jsx";
 import {useUniversityFilter} from "./hooks/useUniversityFilter.js";
@@ -13,6 +13,10 @@ import HomePage from "./pages/HomePage.jsx";
 
 
 function App() {
+
+    useEffect(() => {
+        document.title = "UniSearch";
+    }, []);
 
     const [page,        setPageState]   = useState('home')
     const [selectedItem, setSelectedItem] = useState(null)   // university OR scholarship
