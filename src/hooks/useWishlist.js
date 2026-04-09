@@ -30,7 +30,7 @@ export function useWishlist() {
         try {
             localStorage.setItem(STORAGE_KEY, JSON.stringify(wishlist))
         } catch {
-            // ignore error
+            // ignore
         }
     },[wishlist])
 

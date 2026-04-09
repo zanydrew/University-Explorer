@@ -148,7 +148,7 @@ export const UNIVERSITIES = [
         degree: ["Bachelor", "Engineer", "Master"],
         admissionDate: "Around Oct–Nov (after Bac II)",
 
-        priceMin: 0,
+        priceMin: 200,
         priceMax: 600, // many are scholarship-based
 
         programsCount: 6,
