@@ -1,4 +1,3 @@
-import './styles/UniCard.css'
 import './styles/ScholarshipCard.css'
 import { Heart, MapPin, DollarSign, BookOpen, Clock } from 'lucide-react'
 
